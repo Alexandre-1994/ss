@@ -1,0 +1,212 @@
+ERROR:app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 356, in index
+    resultado = medical_ai.analyze_symptoms(sintomas_relatados, info_adicional)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/medical_ai_module.py", line 39, in analyze_symptoms
+    symptom_vector = self.encoder.transform([symptom_vector]).toarray()[0]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 1024, in transform
+    X_int, X_mask = self._transform(
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 198, in _transform
+    self._check_n_features(X, reset=False)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/base.py", line 443, in _check_n_features
+    raise ValueError(
+ValueError: X has 6 features, but OneHotEncoder is expecting 5 features as input.
+ERROR:app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 356, in index
+    resultado = medical_ai.analyze_symptoms(sintomas_relatados, info_adicional)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/medical_ai_module.py", line 39, in analyze_symptoms
+    symptom_vector = self.encoder.transform([symptom_vector]).toarray()[0]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 1024, in transform
+    X_int, X_mask = self._transform(
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 214, in _transform
+    raise ValueError(msg)
+ValueError: Found unknown categories ['perda de peso'] in column 0 during transform
+ERROR:app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 356, in index
+    resultado = medical_ai.analyze_symptoms(sintomas_relatados, info_adicional)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/medical_ai_module.py", line 39, in analyze_symptoms
+    symptom_vector = self.encoder.transform([symptom_vector]).toarray()[0]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 1024, in transform
+    X_int, X_mask = self._transform(
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 214, in _transform
+    raise ValueError(msg)
+ValueError: Found unknown categories ['conjuntivite'] in column 2 during transform
+ERROR:app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 356, in index
+    resultado = medical_ai.analyze_symptoms(sintomas_relatados, info_adicional)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/medical_ai_module.py", line 39, in analyze_symptoms
+    symptom_vector = self.encoder.transform([symptom_vector]).toarray()[0]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 1024, in transform
+    X_int, X_mask = self._transform(
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 214, in _transform
+    raise ValueError(msg)
+ValueError: Found unknown categories ['tosse'] in column 1 during transform
+ERROR:app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 356, in index
+    resultado = medical_ai.analyze_symptoms(sintomas_relatados, info_adicional)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/medical_ai_module.py", line 39, in analyze_symptoms
+    symptom_vector = self.encoder.transform([symptom_vector]).toarray()[0]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 1024, in transform
+    X_int, X_mask = self._transform(
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 214, in _transform
+    raise ValueError(msg)
+ValueError: Found unknown categories ['febre alta'] in column 2 during transform
+ERROR:app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 356, in index
+    resultado = medical_ai.analyze_symptoms(sintomas_relatados, info_adicional)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/medical_ai_module.py", line 39, in analyze_symptoms
+    symptom_vector = self.encoder.transform([symptom_vector]).toarray()[0]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 1024, in transform
+    X_int, X_mask = self._transform(
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 214, in _transform
+    raise ValueError(msg)
+ValueError: Found unknown categories ['febre alta'] in column 4 during transform
+ERROR:app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 356, in index
+    resultado = medical_ai.analyze_symptoms(sintomas_relatados, info_adicional)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/medical_ai_module.py", line 39, in analyze_symptoms
+    symptom_vector = self.encoder.transform([symptom_vector]).toarray()[0]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 1024, in transform
+    X_int, X_mask = self._transform(
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 214, in _transform
+    raise ValueError(msg)
+ValueError: Found unknown categories ['None'] in column 3 during transform
+ERROR:app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 356, in index
+    resultado = medical_ai.analyze_symptoms(sintomas_relatados, info_adicional)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/medical_ai_module.py", line 39, in analyze_symptoms
+    symptom_vector = self.encoder.transform([symptom_vector]).toarray()[0]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 1024, in transform
+    X_int, X_mask = self._transform(
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 214, in _transform
+    raise ValueError(msg)
+ValueError: Found unknown categories ['visão embaçada'] in column 2 during transform
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 18:36:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 18:37:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 18:37:15] "POST / HTTP/1.1" 200 -
+ERROR:app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 356, in index
+    resultado = medical_ai.analyze_symptoms(sintomas_relatados, info_adicional)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/medical_ai_module.py", line 39, in analyze_symptoms
+    symptom_vector = self.encoder.transform([symptom_vector]).toarray()[0]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 1024, in transform
+    X_int, X_mask = self._transform(
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/sklearn/preprocessing/_encoders.py", line 214, in _transform
+    raise ValueError(msg)
+ValueError: Found unknown categories ['None'] in column 3 during transform
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 18:37:24] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 18:37:37] "POST / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 18:38:55] "POST / HTTP/1.1" 200 -
