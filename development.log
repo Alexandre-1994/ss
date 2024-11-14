@@ -1,0 +1,675 @@
+2024-11-14 15:54:32,811 - app - ERROR - Erro ao inicializar MedicalDiagnosisAI: __init__() got an unexpected keyword argument 'sparse'
+2024-11-14 15:54:32,816 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-14 15:54:32,816 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-14 15:54:37,727 - app - DEBUG - Método da requisição: POST
+2024-11-14 15:54:37,728 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'falta de ar'), ('info_adicional', '')])
+2024-11-14 15:54:37,737 - app - DEBUG - Número de pacientes recuperados: 36
+2024-11-14 15:54:37,737 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'falta de ar']
+2024-11-14 15:54:37,737 - app - DEBUG - Informações adicionais: 
+2024-11-14 15:54:37,739 - app - INFO - Locating template 'index.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/index.html')
+2024-11-14 15:54:37,747 - app - INFO - Locating template 'base.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/base.html')
+2024-11-14 15:54:37,751 - app - INFO - Locating template 'sections/diagnostic.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/diagnostic.html')
+2024-11-14 15:54:37,761 - app - INFO - Locating template 'sections/patients.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/patients.html')
+2024-11-14 15:54:37,766 - app - INFO - Locating template 'sections/history.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/history.html')
+2024-11-14 15:54:37,767 - app - INFO - Locating template 'sections/stats.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/stats.html')
+2024-11-14 15:54:37,768 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:54:37] "POST / HTTP/1.1" 200 -
+2024-11-14 15:54:37,798 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:54:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:54:37,798 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:54:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:54:37,909 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:54:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-14 15:55:02,787 - app - DEBUG - Tentando excluir paciente com ID: 1
+2024-11-14 15:55:02,789 - app - INFO - Paciente com ID 1 excluído com sucesso
+2024-11-14 15:55:02,790 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:55:02] "DELETE /paciente/1 HTTP/1.1" 200 -
+2024-11-14 15:55:02,798 - app - DEBUG - Método da requisição: POST
+2024-11-14 15:55:02,798 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'falta de ar'), ('info_adicional', '')])
+2024-11-14 15:55:02,801 - app - DEBUG - Número de pacientes recuperados: 35
+2024-11-14 15:55:02,801 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'falta de ar']
+2024-11-14 15:55:02,801 - app - DEBUG - Informações adicionais: 
+2024-11-14 15:55:02,803 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:55:02] "POST / HTTP/1.1" 200 -
+2024-11-14 15:55:02,823 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:55:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:55:02,824 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:55:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:55:16,838 - app - DEBUG - Tentando excluir paciente com ID: 36
+2024-11-14 15:55:16,841 - app - INFO - Paciente com ID 36 excluído com sucesso
+2024-11-14 15:55:16,841 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:55:16] "DELETE /paciente/36 HTTP/1.1" 200 -
+2024-11-14 15:55:16,852 - app - DEBUG - Método da requisição: POST
+2024-11-14 15:55:16,853 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'falta de ar'), ('info_adicional', '')])
+2024-11-14 15:55:16,854 - app - DEBUG - Número de pacientes recuperados: 34
+2024-11-14 15:55:16,854 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'falta de ar']
+2024-11-14 15:55:16,854 - app - DEBUG - Informações adicionais: 
+2024-11-14 15:55:16,856 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:55:16] "POST / HTTP/1.1" 200 -
+2024-11-14 15:55:16,874 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:55:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:55:16,874 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:55:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:55:29,382 - app - DEBUG - Tentando excluir paciente com ID: 35
+2024-11-14 15:55:29,385 - app - INFO - Paciente com ID 35 excluído com sucesso
+2024-11-14 15:55:29,385 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:55:29] "DELETE /paciente/35 HTTP/1.1" 200 -
+2024-11-14 15:55:29,395 - app - DEBUG - Método da requisição: POST
+2024-11-14 15:55:29,395 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'falta de ar'), ('info_adicional', '')])
+2024-11-14 15:55:29,397 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 15:55:29,397 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'falta de ar']
+2024-11-14 15:55:29,397 - app - DEBUG - Informações adicionais: 
+2024-11-14 15:55:29,398 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:55:29] "POST / HTTP/1.1" 200 -
+2024-11-14 15:55:29,416 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:55:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:55:29,418 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:55:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:55:35,076 - app - DEBUG - Método da requisição: POST
+2024-11-14 15:55:35,077 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'falta de ar'), ('info_adicional', '')])
+2024-11-14 15:55:35,078 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 15:55:35,078 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'falta de ar']
+2024-11-14 15:55:35,078 - app - DEBUG - Informações adicionais: 
+2024-11-14 15:55:35,080 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:55:35] "POST / HTTP/1.1" 200 -
+2024-11-14 15:55:35,097 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:55:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:55:35,102 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:55:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:56:13,087 - app - DEBUG - Dados recebidos para novo paciente: ImmutableMultiDict([('nome', 'Alexandre Sitole'), ('data_nascimento', '2024-11-14'), ('genero', 'M'), ('telefone', '7562758045'), ('email', 'zywi@mailinator.com'), ('endereco', '11-bairro Vsz\r\nRg')])
+2024-11-14 15:56:13,088 - app - DEBUG - Preparando para inserir paciente: Alexandre Sitole
+2024-11-14 15:56:13,092 - app - ERROR - Erro ao adicionar paciente: table pacientes has no column named telefone
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 346, in adicionar_paciente
+    cursor.execute('''
+sqlite3.OperationalError: table pacientes has no column named telefone
+2024-11-14 15:56:13,099 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:56:13] "[35m[1mPOST /paciente HTTP/1.1[0m" 500 -
+2024-11-14 15:56:13,115 - app - DEBUG - Método da requisição: POST
+2024-11-14 15:56:13,116 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'falta de ar'), ('info_adicional', '')])
+2024-11-14 15:56:13,118 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 15:56:13,118 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'falta de ar']
+2024-11-14 15:56:13,118 - app - DEBUG - Informações adicionais: 
+2024-11-14 15:56:13,120 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:56:13] "POST / HTTP/1.1" 200 -
+2024-11-14 15:56:13,138 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:56:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:56:13,139 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:56:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:56:49,882 - app - DEBUG - Método da requisição: POST
+2024-11-14 15:56:49,882 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'falta de ar'), ('info_adicional', 'Vomitos')])
+2024-11-14 15:56:49,883 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 15:56:49,884 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'falta de ar']
+2024-11-14 15:56:49,884 - app - DEBUG - Informações adicionais: Vomitos
+2024-11-14 15:56:49,886 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:56:49] "POST / HTTP/1.1" 200 -
+2024-11-14 15:56:49,909 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:56:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:56:49,911 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:56:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:57:13,561 - app - DEBUG - Método da requisição: POST
+2024-11-14 15:57:13,562 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'falta de ar'), ('info_adicional', 'Vomitos')])
+2024-11-14 15:57:13,563 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 15:57:13,563 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'falta de ar']
+2024-11-14 15:57:13,563 - app - DEBUG - Informações adicionais: Vomitos
+2024-11-14 15:57:13,565 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:57:13] "POST / HTTP/1.1" 200 -
+2024-11-14 15:57:13,589 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:57:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:57:13,590 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:57:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:57:42,937 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:57:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:57:53,949 - app - DEBUG - Método da requisição: POST
+2024-11-14 15:57:53,950 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'falta de ar'), ('info_adicional', '')])
+2024-11-14 15:57:53,951 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 15:57:53,951 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'falta de ar']
+2024-11-14 15:57:53,951 - app - DEBUG - Informações adicionais: 
+2024-11-14 15:57:53,954 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:57:53] "POST / HTTP/1.1" 200 -
+2024-11-14 15:57:53,977 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:57:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:57:53,981 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:57:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:03:25,138 - app - ERROR - Erro ao inicializar MedicalDiagnosisAI: __init__() got an unexpected keyword argument 'sparse'
+2024-11-14 16:03:25,162 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-14 16:03:25,162 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-14 16:03:25,163 - werkzeug - INFO -  * Restarting with stat
+2024-11-14 16:03:25,658 - app - ERROR - Erro ao inicializar MedicalDiagnosisAI: __init__() got an unexpected keyword argument 'sparse'
+2024-11-14 16:03:25,671 - werkzeug - WARNING -  * Debugger is active!
+2024-11-14 16:03:25,682 - werkzeug - INFO -  * Debugger PIN: 856-842-152
+2024-11-14 16:04:56,517 - werkzeug - INFO -  * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/medical_ai_module.py', reloading
+2024-11-14 16:04:56,578 - werkzeug - INFO -  * Restarting with stat
+2024-11-14 16:04:57,261 - app - INFO - MedicalDiagnosisAI inicializado com sucesso
+2024-11-14 16:04:57,275 - werkzeug - WARNING -  * Debugger is active!
+2024-11-14 16:04:57,280 - werkzeug - INFO -  * Debugger PIN: 856-842-152
+2024-11-14 16:05:29,371 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:05:29,374 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'falta de ar'), ('info_adicional', '')])
+2024-11-14 16:05:29,384 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:05:29,384 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'falta de ar']
+2024-11-14 16:05:29,384 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:05:29,384 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 75.0}
+2024-11-14 16:05:29,384 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:05:29,385 - app - INFO - Locating template 'index.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/index.html')
+2024-11-14 16:05:29,391 - app - INFO - Locating template 'base.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/base.html')
+2024-11-14 16:05:29,395 - app - INFO - Locating template 'sections/diagnostic.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/diagnostic.html')
+2024-11-14 16:05:29,405 - app - INFO - Locating template 'sections/patients.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/patients.html')
+2024-11-14 16:05:29,409 - app - INFO - Locating template 'sections/history.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/history.html')
+2024-11-14 16:05:29,410 - app - INFO - Locating template 'sections/stats.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/stats.html')
+2024-11-14 16:05:29,411 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:05:29] "POST / HTTP/1.1" 200 -
+2024-11-14 16:05:29,443 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:05:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:05:29,443 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:05:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:06:13,703 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:06:13,704 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:06:13,705 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:06:13,705 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:06:13,705 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:06:13,705 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:06:13,705 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:06:13,710 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:06:13] "POST / HTTP/1.1" 200 -
+2024-11-14 16:06:13,732 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:06:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:06:13,734 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:06:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:06:41,622 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:06:41,624 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:06:41,626 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:06:41,626 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:06:41,626 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:06:41,626 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:06:41,626 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:06:41,629 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:06:41] "POST / HTTP/1.1" 200 -
+2024-11-14 16:06:41,651 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:06:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:06:41,653 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:06:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:06:51,124 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:06:51,124 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'tontura'), ('sintomas', 'falta de ar'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:06:51,125 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:06:51,125 - app - DEBUG - Sintomas relatados: ['tontura', 'falta de ar', 'visão embaçada']
+2024-11-14 16:06:51,126 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:06:51,126 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 75.0}
+2024-11-14 16:06:51,126 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:06:51,128 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:06:51] "POST / HTTP/1.1" 200 -
+2024-11-14 16:06:51,151 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:06:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:06:51,151 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:06:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:06:53,070 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:06:53,071 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('info_adicional', '')])
+2024-11-14 16:06:53,072 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:06:53,072 - app - DEBUG - Sintomas relatados: []
+2024-11-14 16:06:53,072 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:06:53,111 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:06:53] "POST / HTTP/1.1" 200 -
+2024-11-14 16:06:53,130 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:06:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:06:53,132 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:06:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:07:03,553 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:07:03,554 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:07:03,554 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:07:03,555 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:07:03,555 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:07:03,555 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:07:03,555 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:07:03,557 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:07:03] "POST / HTTP/1.1" 200 -
+2024-11-14 16:07:03,586 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:07:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:07:03,589 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:07:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:08:40,819 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:08:40,821 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:08:40,822 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:08:40,823 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:08:40,823 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:08:40,823 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:08:40,823 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:08:40,826 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:08:40] "POST / HTTP/1.1" 200 -
+2024-11-14 16:08:40,847 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:08:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:08:40,849 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:08:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:08:45,956 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:08:45,956 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:08:45,957 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:08:45,957 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:08:45,957 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:08:45,958 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:08:45,958 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:08:45,960 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:08:45] "POST / HTTP/1.1" 200 -
+2024-11-14 16:08:45,984 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:08:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:08:45,993 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:08:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:08:46,562 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:08:46,562 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:08:46,564 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:08:46,564 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:08:46,564 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:08:46,564 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:08:46,564 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:08:46,566 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:08:46] "POST / HTTP/1.1" 200 -
+2024-11-14 16:08:46,590 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:08:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:08:46,591 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:08:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:08:46,989 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:08:46,989 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:08:46,990 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:08:46,990 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:08:46,990 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:08:46,990 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:08:46,990 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:08:46,992 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:08:46] "POST / HTTP/1.1" 200 -
+2024-11-14 16:08:47,012 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:08:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:08:47,012 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:08:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:35,703 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:35,703 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:35,705 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:35,705 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:35,705 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:35,705 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:35,705 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:35,708 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:35] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:35,731 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:35,735 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:36,613 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:36,614 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:36,614 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:36,615 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:36,615 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:36,615 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:36,615 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:36,617 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:36] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:36,638 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:36,641 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:37,209 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:37,209 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:37,210 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:37,210 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:37,211 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:37,211 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:37,211 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:37,213 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:37] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:37,235 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:37,236 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:37,555 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:37,555 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:37,556 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:37,556 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:37,556 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:37,556 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:37,556 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:37,559 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:37] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:37,580 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:37,581 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:37,752 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:37,753 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:37,754 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:37,754 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:37,754 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:37,754 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:37,754 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:37,756 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:37] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:37,770 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:37,770 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:37,923 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:37,924 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:37,925 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:37,925 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:37,925 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:37,925 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:37,925 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:37,927 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:37] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:37,940 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:37,941 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:38,101 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:38,101 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:38,102 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:38,102 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:38,102 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:38,103 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:38,103 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:38,105 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:38] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:38,120 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:38,120 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:38,303 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:38,303 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:38,304 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:38,304 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:38,304 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:38,304 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:38,304 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:38,306 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:38] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:38,319 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:38,322 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:42,868 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:42,869 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:42,870 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:42,870 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:42,870 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:42,870 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:42,870 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:42,873 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:42] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:42,891 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:42,894 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:43,463 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:43,463 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:43,465 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:43,465 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:43,465 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:43,465 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:43,465 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:43,467 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:43] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:43,489 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:43,492 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:43,658 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:43,659 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:43,660 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:43,660 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:43,660 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:43,660 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:43,660 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:43,662 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:43] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:43,676 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:43,679 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:43,840 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:43,841 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:43,841 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:43,842 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:43,842 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:43,842 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:43,842 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:43,844 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:43] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:43,862 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:43,870 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:44,016 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:44,018 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:44,018 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:44,019 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:44,019 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:44,019 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:44,019 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:44,021 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:44] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:44,033 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:44,036 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:44,224 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:44,224 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:44,225 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:44,225 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:44,225 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:44,226 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:44,226 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:44,228 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:44] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:44,253 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:44,254 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:44,399 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:44,400 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:44,401 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:44,401 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:44,401 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:44,401 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:44,401 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:44,404 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:44] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:44,416 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:44,419 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:44,580 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:44,581 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:44,582 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:44,582 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:44,582 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:44,582 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:44,582 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:44,584 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:44] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:44,597 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:44,601 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:48,262 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:48,262 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:48,263 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:48,263 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:48,263 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:48,264 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:48,264 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:48,266 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:48] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:48,285 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:48,290 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:09:50,612 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:09:50,613 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:09:50,614 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:09:50,615 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:09:50,615 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:09:50,615 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:09:50,615 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:09:50,617 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:50] "POST / HTTP/1.1" 200 -
+2024-11-14 16:09:50,641 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:09:50,646 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:09:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:10:21,912 - app - INFO - MedicalDiagnosisAI inicializado com sucesso
+2024-11-14 16:10:21,934 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-14 16:10:21,934 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-14 16:10:21,934 - werkzeug - INFO -  * Restarting with stat
+2024-11-14 16:10:22,499 - app - INFO - MedicalDiagnosisAI inicializado com sucesso
+2024-11-14 16:10:22,512 - werkzeug - WARNING -  * Debugger is active!
+2024-11-14 16:10:22,518 - werkzeug - INFO -  * Debugger PIN: 856-842-152
+2024-11-14 16:10:32,189 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:10:32,192 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('info_adicional', '')])
+2024-11-14 16:10:32,201 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:10:32,201 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada']
+2024-11-14 16:10:32,202 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:10:32,202 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 50.0}
+2024-11-14 16:10:32,202 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:10:32,203 - app - INFO - Locating template 'index.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/index.html')
+2024-11-14 16:10:32,210 - app - INFO - Locating template 'base.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/base.html')
+2024-11-14 16:10:32,214 - app - INFO - Locating template 'sections/diagnostic.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/diagnostic.html')
+2024-11-14 16:10:32,224 - app - INFO - Locating template 'sections/patients.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/patients.html')
+2024-11-14 16:10:32,228 - app - INFO - Locating template 'sections/history.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/history.html')
+2024-11-14 16:10:32,229 - app - INFO - Locating template 'sections/stats.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/stats.html')
+2024-11-14 16:10:32,230 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:10:32] "POST / HTTP/1.1" 200 -
+2024-11-14 16:10:32,258 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:10:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:10:32,259 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:10:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:10:42,368 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:10:42,369 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'perda de peso'), ('sintomas', 'suor noturno'), ('sintomas', 'febre'), ('sintomas', 'fadiga'), ('info_adicional', '')])
+2024-11-14 16:10:42,370 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:10:42,370 - app - DEBUG - Sintomas relatados: ['perda de peso', 'suor noturno', 'febre', 'fadiga']
+2024-11-14 16:10:42,370 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:10:42,370 - app - DEBUG - Resultado da análise: {'sintomas': ['tosse persistente', 'perda de peso', 'suor noturno', 'febre', 'fadiga'], 'possivel_condicao': 'Tuberculose', 'recomendacao': 'Procurar atendimento médico e realizar exame de escarro', 'urgencia': 'alta', 'exames_recomendados': ['Teste de Escarro', 'Raio-X de Tórax'], 'especialista': 'Infectologista', 'fatores_risco': ['contato com infectados', 'sistema imunológico enfraquecido'], 'categoria': 'infectologia', 'condicao': 'tuberculose', 'confianca': 80.0}
+2024-11-14 16:10:42,370 - app - DEBUG - Diagnóstico adicionado ao histórico: infectologia
+2024-11-14 16:10:42,373 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:10:42] "POST / HTTP/1.1" 200 -
+2024-11-14 16:10:42,403 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:10:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:10:42,403 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:10:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:11:31,553 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:11:31,555 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'tontura'), ('sintomas', 'dor muscular'), ('sintomas', 'cansaço'), ('sintomas', 'febre'), ('info_adicional', '')])
+2024-11-14 16:11:31,556 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:11:31,556 - app - DEBUG - Sintomas relatados: ['tontura', 'dor muscular', 'cansaço', 'febre']
+2024-11-14 16:11:31,556 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:11:31,557 - app - DEBUG - Resultado da análise: None
+2024-11-14 16:11:31,559 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:11:31] "POST / HTTP/1.1" 200 -
+2024-11-14 16:11:31,584 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:11:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:11:31,585 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:11:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:11:51,308 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:11:51,308 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'visão embaçada'), ('sintomas', 'dor muscular'), ('sintomas', 'cansaço'), ('sintomas', 'tosse persistente'), ('info_adicional', '')])
+2024-11-14 16:11:51,309 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:11:51,310 - app - DEBUG - Sintomas relatados: ['visão embaçada', 'dor muscular', 'cansaço', 'tosse persistente']
+2024-11-14 16:11:51,310 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:11:51,310 - app - DEBUG - Resultado da análise: None
+2024-11-14 16:11:51,314 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:11:51] "POST / HTTP/1.1" 200 -
+2024-11-14 16:11:51,345 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:11:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:11:51,346 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:11:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:11:56,285 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:11:56,285 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'visão embaçada'), ('sintomas', 'dor muscular'), ('sintomas', 'cansaço'), ('sintomas', 'tosse persistente'), ('info_adicional', '')])
+2024-11-14 16:11:56,286 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:11:56,286 - app - DEBUG - Sintomas relatados: ['visão embaçada', 'dor muscular', 'cansaço', 'tosse persistente']
+2024-11-14 16:11:56,287 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:11:56,287 - app - DEBUG - Resultado da análise: None
+2024-11-14 16:11:56,319 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:11:56] "POST / HTTP/1.1" 200 -
+2024-11-14 16:11:56,340 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:11:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:11:56,341 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:11:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:12:16,621 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:12:16,622 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'tontura'), ('sintomas', 'febre alta'), ('sintomas', 'calafrios'), ('sintomas', 'dor muscular'), ('sintomas', 'fadiga'), ('info_adicional', '')])
+2024-11-14 16:12:16,624 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:12:16,624 - app - DEBUG - Sintomas relatados: ['tontura', 'febre alta', 'calafrios', 'dor muscular', 'fadiga']
+2024-11-14 16:12:16,624 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:12:16,625 - app - DEBUG - Resultado da análise: {'sintomas': ['febre alta', 'calafrios', 'suor intenso', 'dor muscular', 'cansaço'], 'possivel_condicao': 'Malária', 'recomendacao': 'Procurar atendimento médico para teste rápido de malária', 'urgencia': 'alta', 'exames_recomendados': ['Teste Rápido de Malária', 'Exame de Sangue'], 'especialista': 'Infectologista', 'fatores_risco': ['exposição a mosquitos', 'região endêmica'], 'categoria': 'infectologia', 'condicao': 'malaria', 'confianca': 42.86}
+2024-11-14 16:12:16,625 - app - DEBUG - Diagnóstico adicionado ao histórico: infectologia
+2024-11-14 16:12:16,627 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:12:16] "POST / HTTP/1.1" 200 -
+2024-11-14 16:12:16,652 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:12:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:12:16,653 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:12:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:13:52,851 - app - DEBUG - Dados recebidos para novo paciente: ImmutableMultiDict([('nome', 'Impedit sint dolore'), ('data_nascimento', '2021-10-02'), ('genero', 'M'), ('telefone', '+1 (812) 998-4444'), ('email', 'cigah@mailinator.com'), ('endereco', 'In at deserunt quos ')])
+2024-11-14 16:13:52,853 - app - DEBUG - Preparando para inserir paciente: Impedit sint dolore
+2024-11-14 16:13:52,856 - app - ERROR - Erro ao adicionar paciente: table pacientes has no column named telefone
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 346, in adicionar_paciente
+    cursor.execute('''
+sqlite3.OperationalError: table pacientes has no column named telefone
+2024-11-14 16:13:52,864 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:13:52] "[35m[1mPOST /paciente HTTP/1.1[0m" 500 -
+2024-11-14 16:13:52,875 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:13:52,877 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'tontura'), ('sintomas', 'febre alta'), ('sintomas', 'calafrios'), ('sintomas', 'dor muscular'), ('sintomas', 'fadiga'), ('info_adicional', '')])
+2024-11-14 16:13:52,879 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:13:52,879 - app - DEBUG - Sintomas relatados: ['tontura', 'febre alta', 'calafrios', 'dor muscular', 'fadiga']
+2024-11-14 16:13:52,879 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:13:52,879 - app - DEBUG - Resultado da análise: {'sintomas': ['febre alta', 'calafrios', 'suor intenso', 'dor muscular', 'cansaço'], 'possivel_condicao': 'Malária', 'recomendacao': 'Procurar atendimento médico para teste rápido de malária', 'urgencia': 'alta', 'exames_recomendados': ['Teste Rápido de Malária', 'Exame de Sangue'], 'especialista': 'Infectologista', 'fatores_risco': ['exposição a mosquitos', 'região endêmica'], 'categoria': 'infectologia', 'condicao': 'malaria', 'confianca': 42.86}
+2024-11-14 16:13:52,879 - app - DEBUG - Diagnóstico adicionado ao histórico: infectologia
+2024-11-14 16:13:52,882 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:13:52] "POST / HTTP/1.1" 200 -
+2024-11-14 16:13:52,912 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:13:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:13:52,913 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:13:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:14:07,919 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:14:07,920 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'calafrios'), ('sintomas', 'suor intenso'), ('info_adicional', '')])
+2024-11-14 16:14:07,921 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:14:07,921 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'calafrios', 'suor intenso']
+2024-11-14 16:14:07,921 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:14:07,921 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 33.33}
+2024-11-14 16:14:07,921 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:14:07,924 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:07] "POST / HTTP/1.1" 200 -
+2024-11-14 16:14:07,945 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:14:07,946 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:14:26,039 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:14:26,040 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'calafrios'), ('sintomas', 'suor intenso'), ('info_adicional', '')])
+2024-11-14 16:14:26,041 - app - DEBUG - Número de pacientes recuperados: 33
+2024-11-14 16:14:26,041 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'calafrios', 'suor intenso']
+2024-11-14 16:14:26,041 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:14:26,042 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 33.33}
+2024-11-14 16:14:26,042 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:14:26,044 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:26] "POST / HTTP/1.1" 200 -
+2024-11-14 16:14:26,068 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:14:26,068 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:14:36,317 - app - DEBUG - Buscando paciente com ID: 2
+2024-11-14 16:14:36,318 - app - DEBUG - Paciente encontrado: João Silva
+2024-11-14 16:14:36,318 - app - ERROR - Erro ao buscar paciente: No item with that key
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 142, in obter_paciente
+    "telefone": paciente['telefone'],
+IndexError: No item with that key
+2024-11-14 16:14:36,319 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:36] "[35m[1mGET /paciente/2 HTTP/1.1[0m" 500 -
+2024-11-14 16:14:43,049 - app - DEBUG - Buscando paciente com ID: 2
+2024-11-14 16:14:43,050 - app - DEBUG - Paciente encontrado: João Silva
+2024-11-14 16:14:43,050 - app - ERROR - Erro ao buscar paciente: No item with that key
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 142, in obter_paciente
+    "telefone": paciente['telefone'],
+IndexError: No item with that key
+2024-11-14 16:14:43,051 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:43] "[35m[1mGET /paciente/2 HTTP/1.1[0m" 500 -
+2024-11-14 16:14:47,125 - app - DEBUG - Tentando excluir paciente com ID: 2
+2024-11-14 16:14:47,127 - app - INFO - Paciente com ID 2 excluído com sucesso
+2024-11-14 16:14:47,128 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:47] "DELETE /paciente/2 HTTP/1.1" 200 -
+2024-11-14 16:14:47,133 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:14:47,133 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'calafrios'), ('sintomas', 'suor intenso'), ('info_adicional', '')])
+2024-11-14 16:14:47,134 - app - DEBUG - Número de pacientes recuperados: 32
+2024-11-14 16:14:47,134 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'calafrios', 'suor intenso']
+2024-11-14 16:14:47,134 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:14:47,135 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 33.33}
+2024-11-14 16:14:47,135 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:14:47,136 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:47] "POST / HTTP/1.1" 200 -
+2024-11-14 16:14:47,153 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:14:47,156 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:14:55,855 - app - DEBUG - Tentando excluir paciente com ID: 3
+2024-11-14 16:14:55,858 - app - INFO - Paciente com ID 3 excluído com sucesso
+2024-11-14 16:14:55,860 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:55] "DELETE /paciente/3 HTTP/1.1" 200 -
+2024-11-14 16:14:55,870 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:14:55,870 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'calafrios'), ('sintomas', 'suor intenso'), ('info_adicional', '')])
+2024-11-14 16:14:55,871 - app - DEBUG - Número de pacientes recuperados: 31
+2024-11-14 16:14:55,872 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'calafrios', 'suor intenso']
+2024-11-14 16:14:55,872 - app - DEBUG - Informações adicionais: 
+2024-11-14 16:14:55,872 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 33.33}
+2024-11-14 16:14:55,872 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2024-11-14 16:14:55,874 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:55] "POST / HTTP/1.1" 200 -
+2024-11-14 16:14:55,895 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:14:55,896 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -

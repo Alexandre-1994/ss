@@ -1,0 +1,102 @@
+<div class="row">
+    <div class="col-md-8">
+        <!-- Formulário de Diagnóstico -->
+        <div class="card">
+            <div class="card-body">
+                <h4><i class="fas fa-stethoscope me-2"></i>Avaliação de Sintomas</h4>
+                <form method="POST" action="{{ url_for('index') }}">
+                    {% for categoria, condicoes in knowledge_base['categorias'].items() %}
+                    <div class="symptom-group mb-4">
+                        <h5 class="mb-3">
+                            <i class="fas fa-folder-open me-2"></i>
+                            {{ categoria.title() }}
+                        </h5>
+                        {% for condicao, dados in condicoes.items() %}
+                            {% for sintoma in dados['sintomas'] %}
+                            <div class="form-check mb-2">
+                                <input type="checkbox" class="form-check-input" 
+                                       name="sintomas" value="{{ sintoma }}" 
+                                       id="{{ sintoma|replace(' ', '_') }}">
+                                <label class="form-check-label" 
+                                       for="{{ sintoma|replace(' ', '_') }}">
+                                    {{ sintoma.title() }}
+                                </label>
+                            </div>
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                    
+                    <div class="mb-3">
+                        <label class="form-label">
+                            <i class="fas fa-notes-medical me-2"></i>
+                            Informações Adicionais:
+                        </label>
+                        <textarea class="form-control" name="info_adicional" rows="3" 
+                                  placeholder="Descreva quaisquer detalhes adicionais relevantes..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-search me-2"></i>Analisar Sintomas
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Resultado do Diagnóstico -->
+        {% if resultado %}
+        <div class="card mt-4 result-card">
+            <div class="card-body">
+                <h4 class="card-title">
+                    <i class="fas fa-file-medical me-2"></i>Análise Detalhada
+                </h4>
+                
+                <div class="alert alert-{% if resultado.urgencia == 'alta' %}danger
+                                    {% elif resultado.urgencia == 'moderada' %}warning
+                                    {% else %}success{% endif %} mb-3">
+                    <i class="fas fa-exclamation-circle me-2"></i>
+                    <strong>Nível de Urgência:</strong> {{ resultado.urgencia.upper() }}
+                </div>
+                
+                <div class="mb-4">
+                    <h5><i class="fas fa-diagnoses me-2"></i>Possível Condição:</h5>
+                    <p class="lead">{{ resultado.possivel_condicao }}</p>
+                </div>
+                
+                <div class="mb-4">
+                    <h5><i class="fas fa-clipboard-list me-2"></i>Recomendações:</h5>
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <i class="fas fa-check-circle me-2 text-success"></i>
+                            {{ resultado.recomendacao }}
+                        </div>
+                        {% for exame in resultado.exames_recomendados %}
+                        <div class="list-group-item">
+                            <i class="fas fa-flask me-2 text-primary"></i>
+                            Exame recomendado: {{ exame }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <h5><i class="fas fa-user-md me-2"></i>Especialista Recomendado:</h5>
+                    <p class="h6">{{ resultado.especialista }}</p>
+                </div>
+                
+                <div>
+                    <h5><i class="fas fa-exclamation-triangle me-2"></i>Fatores de Risco:</h5>
+                    <div class="list-group">
+                        {% for fator in resultado.fatores_risco %}
+                        <div class="list-group-item">
+                            <i class="fas fa-arrow-right me-2 text-warning"></i>
+                            {{ fator.title() }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>

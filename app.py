@@ -1,382 +1,389 @@
-import logging
-logging.basicConfig(filename='app.log', level=logging.ERROR)
+from flask import Flask, render_template, request, jsonify, url_for
 from medical_ai_module import MedicalDiagnosisAI
-from flask import Flask, render_template_string, request, jsonify
+from sklearn.preprocessing import OneHotEncoder
+import sqlite3
+import logging
 from datetime import datetime
 import json
-import random
+import os
+from config import DevelopmentConfig
 
+# Criar aplicação Flask
+# Criar aplicação Flask
 app = Flask(__name__)
+app.config.from_object(DevelopmentConfig)
 
-# Base de conhecimento expandida com categorias e detalhes mais específicos
-knowledge_base = {
-    "categorias": {
-        "cardiologia": {
-            "hipertensao": {
-                "sintomas": ["dor de cabeça", "tontura", "falta de ar", "visão embaçada"],
-                "possivel_condicao": "Hipertensão Arterial",
-                "recomendacao": "Monitoramento da pressão arterial e mudanças no estilo de vida",
-                "urgencia": "moderada",
-                "exames_recomendados": ["Medição de Pressão", "Exame de Sangue", "ECG"],
-                "especialista": "Cardiologista",
-                "fatores_risco": ["idade", "obesidade", "sedentarismo", "alimentação rica em sal"]
-            }
-        },
-        "infectologia": {
-            "malaria": {
-                "sintomas": ["febre alta", "calafrios", "suor intenso", "dor muscular", "cansaço"],
-                "possivel_condicao": "Malária",
-                "recomendacao": "Procurar atendimento médico para teste rápido de malária",
-                "urgencia": "alta",
-                "exames_recomendados": ["Teste Rápido de Malária", "Exame de Sangue"],
-                "especialista": "Infectologista",
-                "fatores_risco": ["exposição a mosquitos", "região endêmica"]
-            },
-            "tuberculose": {
-                "sintomas": ["tosse persistente", "perda de peso", "suor noturno", "febre", "fadiga"],
-                "possivel_condicao": "Tuberculose",
-                "recomendacao": "Procurar atendimento médico e realizar exame de escarro",
-                "urgencia": "alta",
-                "exames_recomendados": ["Teste de Escarro", "Raio-X de Tórax"],
-                "especialista": "Infectologista",
-                "fatores_risco": ["contato com infectados", "sistema imunológico enfraquecido"]
-            }
-        },
-        "pneumologia": {
-            "bronquite_cronica": {
-                "sintomas": ["tosse persistente", "produção de muco", "falta de ar", "fadiga"],
-                "possivel_condicao": "Bronquite Crônica",
-                "recomendacao": "Evitar exposição a irritantes e buscar atendimento médico",
-                "urgencia": "moderada",
-                "exames_recomendados": ["Raio-X de Tórax", "Espirometria"],
-                "especialista": "Pneumologista",
-                "fatores_risco": ["tabagismo", "exposição a poluentes"]
-            }
-        },
-        "gastroenterologia": {
-            "diarreia": {
-                "sintomas": ["fezes líquidas", "dor abdominal", "náusea", "febre"],
-                "possivel_condicao": "Infecção Gastrointestinal",
-                "recomendacao": "Manter hidratação e procurar atendimento caso os sintomas persistam",
-                "urgencia": "moderada",
-                "exames_recomendados": ["Exame de Fezes"],
-                "especialista": "Gastroenterologista",
-                "fatores_risco": ["água contaminada", "alimentos mal lavados"]
-            }
-        },
-        "dermatologia": {
-            "sarampo": {
-                "sintomas": ["erupções na pele", "febre alta", "tosse", "conjuntivite"],
-                "possivel_condicao": "Sarampo",
-                "recomendacao": "Isolamento e procurar atendimento médico",
-                "urgencia": "alta",
-                "exames_recomendados": ["Exame de Sangue para Anticorpos"],
-                "especialista": "Dermatologista",
-                "fatores_risco": ["contato com infectados", "não vacinação"]
-            }
-        },
-        "oftalmologia": {
-            "conjuntivite": {
-                "sintomas": ["olhos vermelhos", "coceira", "sensibilidade à luz", "lacrimejamento"],
-                "possivel_condicao": "Conjuntivite",
-                "recomendacao": "Evitar contato com os olhos e buscar atendimento",
-                "urgencia": "baixa",
-                "exames_recomendados": ["Avaliação Clínica"],
-                "especialista": "Oftalmologista",
-                "fatores_risco": ["contato com infectados", "alergias"]
-            }
-        }
-    }
+# Configurar logging
+logging.basicConfig(
+    filename=app.config['LOG_FILENAME'],
+    level=app.config['LOG_LEVEL'],
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+# Adicionar logger para console também
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+console_handler.setFormatter(formatter)
+logger.addHandler(console_handler)
+
+# Função para conectar ao banco de dados
+def get_db_connection():
+    try:
+        conn = sqlite3.connect('clinica.db')
+        conn.row_factory = sqlite3.Row
+        return conn
+    except Exception as e:
+        logger.error(f"Erro ao conectar ao banco de dados: {str(e)}")
+        return None
+
+# Inicialização do banco de dados
+def init_db():
+    try:
+        conn = get_db_connection()
+        if conn is not None:
+            cursor = conn.cursor()
+            
+            # Criar tabela de pacientes
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS pacientes (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    nome TEXT NOT NULL,
+                    idade INTEGER,
+                    genero TEXT,
+                    telefone TEXT,
+                    email TEXT,
+                    endereco TEXT,
+                    data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+            ''')
+            
+            # Criar tabela de consultas
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS consultas (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    paciente_id INTEGER,
+                    sintomas TEXT,
+                    diagnostico TEXT,
+                    recomendacao TEXT,
+                    urgencia TEXT,
+                    data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    observacoes TEXT,
+                    FOREIGN KEY (paciente_id) REFERENCES pacientes(id)
+                )
+            ''')
+            
+            conn.commit()
+            logger.info("Banco de dados inicializado com sucesso")
+            return True
+    except Exception as e:
+        logger.error(f"Erro ao inicializar banco de dados: {str(e)}")
+        return False
+    finally:
+        if conn:
+            conn.close()
+
+# Carregar a base de conhecimento
+def load_knowledge_base():
+    try:
+        with open('knowledge_base.json', 'r', encoding='utf-8') as file:
+            return json.load(file)
+    except Exception as e:
+        logger.error(f"Erro ao carregar knowledge_base.json: {str(e)}")
+        return {"categorias": {}}
+
+# Calcular idade
+def calcular_idade(data_nascimento):
+    nascimento = datetime.strptime(data_nascimento, '%Y-%m-%d')
+    hoje = datetime.now()
+    idade = hoje.year - nascimento.year
+    if hoje.month < nascimento.month or (hoje.month == nascimento.month and hoje.day < nascimento.day):
+        idade -= 1
+    return idade
+
+# Inicialização global
+knowledge_base = load_knowledge_base()
+medical_ai = None
+diagnostics_history = []
+estado_atual = {
+    "sintomas_verificados": [],
+    "dados_do_paciente": {}
 }
 
-# Instância da IA de diagnóstico médico
-medical_ai = MedicalDiagnosisAI(knowledge_base)
+# Inicializar medical_ai
+try:
+    medical_ai = MedicalDiagnosisAI(knowledge_base)
+    logger.info("MedicalDiagnosisAI inicializado com sucesso")
+except Exception as e:
+    logger.error(f"Erro ao inicializar MedicalDiagnosisAI: {str(e)}")
 
-# Histórico de diagnósticos para análise
-diagnostics_history = []
-
-# Template HTML com interface moderna e recursos avançados
-HTML_TEMPLATE = """
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Sistema Avançado de Diagnóstico Médico</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-        }
+# Suas rotas continuam aqui...
+# Rotas para gerenciar pacientes
+@app.route('/paciente/<int:id>', methods=['GET'])
+def obter_paciente(id):
+    try:
+        logger.debug(f"Buscando paciente com ID: {id}")
         
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
-        }
-        
-        .card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1.5rem;
-        }
-        
-        .symptom-group {
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-        }
-        
-        .urgency-high {
-            color: #dc3545;
-            font-weight: bold;
-        }
-        
-        .urgency-moderate {
-            color: #ffc107;
-            font-weight: bold;
-        }
-        
-        .urgency-low {
-            color: #28a745;
-            font-weight: bold;
-        }
-        
-        .stats-card {
-            background-color: white;
-            padding: 1rem;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-        }
-        
-        .chart-container {
-            position: relative;
-            height: 300px;
-            margin-bottom: 2rem;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <div class="container">
-            <h1 class="display-4">Sistema Avançado de Diagnóstico Médico</h1>
-            <p class="lead">Análise inteligente de sintomas com suporte à decisão clínica</p>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-body">
-                        <h3>Avaliação de Sintomas</h3>
-                        <form method="POST" id="diagnosticForm">
-                            {% for categoria, condicoes in knowledge_base['categorias'].items() %}
-                            <div class="symptom-group">
-                                <h4>{{ categoria.title() }}</h4>
-                                {% for condicao, dados in condicoes.items() %}
-                                    {% for sintoma in dados['sintomas'] %}
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" 
-                                               name="sintomas" value="{{ sintoma }}" 
-                                               id="{{ sintoma|replace(' ', '_') }}">
-                                        <label class="form-check-label" 
-                                               for="{{ sintoma|replace(' ', '_') }}">
-                                            {{ sintoma.title() }}
-                                        </label>
-                                    </div>
-                                    {% endfor %}
-                                {% endfor %}
-                            </div>
-                            {% endfor %}
-                            
-                            <div class="mb-3">
-                                <label class="form-label">Informações Adicionais:</label>
-                                <textarea class="form-control" name="info_adicional" 
-                                          rows="3" placeholder="Descreva detalhes adicionais relevantes..."></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary">Analisar Sintomas</button>
-                        </form>
-                    </div>
-                </div>
+        conn = get_db_connection()
+        if conn is not None:
+            cursor = conn.cursor()
+            cursor.execute('SELECT * FROM pacientes WHERE id = ?', (id,))
+            paciente = cursor.fetchone()
+            conn.close()
+            
+            if paciente:
+                logger.debug(f"Paciente encontrado: {paciente['nome']}")
+                return jsonify({
+                    "id": paciente['id'],
+                    "nome": paciente['nome'],
+                    "idade": paciente['idade'],
+                    "genero": paciente['genero'],
+                    "telefone": paciente['telefone'],
+                    "email": paciente['email'],
+                    "endereco": paciente['endereco']
+                })
                 
-                {% if resultado %}
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">Análise Detalhada</h3>
-                        <div class="alert alert-{% if resultado.urgencia == 'alta' %}danger
-                                                {% elif resultado.urgencia == 'moderada' %}warning
-                                                {% else %}success{% endif %} mb-3">
-                            Nível de Urgência: {{ resultado.urgencia.upper() }}
-                        </div>
-                        
-                        <h4>Possível Condição:</h4>
-                        <p class="lead">{{ resultado.possivel_condicao }}</p>
-                        
-                        <h4>Recomendações:</h4>
-                        <ul class="list-group mb-3">
-                            <li class="list-group-item">{{ resultado.recomendacao }}</li>
-                            {% for exame in resultado.exames_recomendados %}
-                            <li class="list-group-item">Exame recomendado: {{ exame }}</li>
-                            {% endfor %}
-                        </ul>
-                        
-                        <h4>Especialista Recomendado:</h4>
-                        <p>{{ resultado.especialista }}</p>
-                        
-                        <h4>Fatores de Risco:</h4>
-                        <ul class="list-group mb-3">
-                            {% for fator in resultado.fatores_risco %}
-                            <li class="list-group-item">{{ fator.title() }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-                {% endif %}
-            </div>
-            
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h3>Estatísticas do Sistema</h3>
-                        <div class="chart-container">
-                            <canvas id="diagnosticsChart"></canvas>
-                        </div>
-                        <div class="stats-card">
-                            <h5>Análises Realizadas</h5>
-                            <p class="h3">{{ diagnostics_history|length }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
-    <script>
-        // Configuração do gráfico de diagnósticos
-        const ctx = document.getElementById('diagnosticsChart').getContext('2d');
-        const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Cardiologia', 'Neurologia', 'Pneumologia'],
-                datasets: [{
-                    label: 'Diagnósticos por Especialidade',
-                    data: [
-                        {{ diagnostics_history.count('Cardiologia') }},
-                        {{ diagnostics_history.count('Neurologia') }},
-                        {{ diagnostics_history.count('Pneumologia') }}
-                    ],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(75, 192, 192, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(75, 192, 192, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    </script>
-</body>
-</html>
-"""
-
-def analisar_sintomas(sintomas_relatados, info_adicional=""):
-    """
-    Analisa os sintomas relatados usando um algoritmo mais sofisticado
-    que considera múltiplos fatores.
-    """
-    melhor_correspondencia = None
-    max_score = 0
-
-    for categoria, condicoes in knowledge_base["categorias"].items():
-        for condicao, dados in condicoes.items():
-            score = calcular_score_sintomas(sintomas_relatados, dados["sintomas"])
-            
-            if score > max_score:
-                max_score = score
-                melhor_correspondencia = dados.copy()
-                melhor_correspondencia["categoria"] = categoria
-
-    if melhor_correspondencia:
-        # Registra o diagnóstico no histórico
-        diagnostics_history.append(melhor_correspondencia["categoria"])
-        return melhor_correspondencia
-    
-    return None
-
-def calcular_score_sintomas(sintomas_relatados, sintomas_condicao):
-    """
-    Calcula um score de correspondência entre os sintomas relatados
-    e os sintomas conhecidos de uma condição.
-    """
-    sintomas_relatados_set = set(sintomas_relatados)
-    sintomas_condicao_set = set(sintomas_condicao)
-    
-    # Calcula a interseção e união dos conjuntos
-    intersecao = len(sintomas_relatados_set.intersection(sintomas_condicao_set))
-    uniao = len(sintomas_relatados_set.union(sintomas_condicao_set))
-    
-    # Calcula o coeficiente de Jaccard
-    if uniao == 0:
-        return 0
-    return intersecao / uniao
-
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    resultado = None
-    if request.method == 'POST':
-        sintomas_relatados = request.form.getlist('sintomas')
-        info_adicional = request.form.get('info_adicional', '')
+        logger.warning(f"Paciente com ID {id} não encontrado")
+        return jsonify({"message": "Paciente não encontrado"}), 404
         
-        if sintomas_relatados:
-            resultado = medical_ai.analyze_symptoms(sintomas_relatados, info_adicional)
+    except Exception as e:
+        logger.exception(f"Erro ao buscar paciente: {str(e)}")
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+@app.route('/paciente/<int:id>', methods=['DELETE'])
+def excluir_paciente(id):
+    try:
+        logger.debug(f"Tentando excluir paciente com ID: {id}")
+        
+        conn = get_db_connection()
+        if conn is not None:
+            cursor = conn.cursor()
+            cursor.execute('DELETE FROM pacientes WHERE id = ?', (id,))
+            conn.commit()
+            conn.close()
             
-            # Registra o diagnóstico no histórico
-            if resultado:
-                diagnostics_history.append(resultado["categoria"])
-    
-    return render_template_string(HTML_TEMPLATE, 
-                                resultado=resultado, 
-                                knowledge_base=knowledge_base,
-                                diagnostics_history=diagnostics_history)
+            logger.info(f"Paciente com ID {id} excluído com sucesso")
+            return jsonify({"status": "success", "message": "Paciente excluído com sucesso"})
+            
+    except Exception as e:
+        logger.exception(f"Erro ao excluir paciente: {str(e)}")
+        return jsonify({"status": "error", "message": str(e)}), 500
 
 @app.route('/api/statistics', methods=['GET'])
 def get_statistics():
     """
     API endpoint para estatísticas do sistema
     """
-    stats = {
-        'total_diagnosticos': len(diagnostics_history),
-        'diagnosticos_por_categoria': {
-            categoria: diagnostics_history.count(categoria)
-            for categoria in knowledge_base["categorias"].keys()
+    try:
+        logger.debug("Gerando estatísticas do sistema")
+        
+        stats = {
+            'total_diagnosticos': len(diagnostics_history),
+            'diagnosticos_por_categoria': {
+                categoria: diagnostics_history.count(categoria)
+                for categoria in knowledge_base["categorias"].keys()
+            }
         }
-    }
-    return jsonify(stats)
+        
+        logger.debug(f"Estatísticas geradas: {stats}")
+        return jsonify(stats)
+        
+    except Exception as e:
+        logger.exception(f"Erro ao gerar estatísticas: {str(e)}")
+        return jsonify({"status": "error", "message": str(e)}), 500
 
+@app.route('/reiniciar', methods=['POST'])
+def reiniciar_verificacao():
+    try:
+        logger.debug("Reiniciando verificação")
+        
+        global estado_atual
+        estado_atual = {
+            "sintomas_verificados": [],
+            "dados_do_paciente": {}
+        }
+        
+        logger.info("Verificação reiniciada com sucesso")
+        return jsonify({"status": "reiniciado com sucesso"}), 200
+        
+    except Exception as e:
+        logger.exception(f"Erro ao reiniciar verificação: {str(e)}")
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+@app.route('/consulta', methods=['POST'])
+def adicionar_consulta():
+    try:
+        logger.debug(f"Dados recebidos para nova consulta: {request.form}")
+        
+        conn = get_db_connection()
+        if conn is not None:
+            cursor = conn.cursor()
+            dados = request.form
+            
+            cursor.execute('''
+                INSERT INTO consultas (paciente_id, sintomas, diagnostico, 
+                                     recomendacao, urgencia, observacoes)
+                VALUES (?, ?, ?, ?, ?, ?)
+            ''', (
+                dados['paciente_id'],
+                dados['sintomas'],
+                dados['diagnostico'],
+                dados['recomendacao'],
+                dados['urgencia'],
+                dados.get('observacoes', '')
+            ))
+            
+            last_id = cursor.lastrowid
+            logger.debug(f"Consulta inserida com ID: {last_id}")
+            
+            conn.commit()
+            conn.close()
+            return jsonify({
+                "status": "success", 
+                "message": "Consulta adicionada com sucesso",
+                "id": last_id
+            })
+            
+    except Exception as e:
+        logger.exception(f"Erro ao adicionar consulta: {str(e)}")
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+@app.route('/consultas/<int:paciente_id>', methods=['GET'])
+def obter_consultas_paciente(paciente_id):
+    try:
+        logger.debug(f"Buscando consultas do paciente ID: {paciente_id}")
+        
+        conn = get_db_connection()
+        if conn is not None:
+            cursor = conn.cursor()
+            cursor.execute('''
+                SELECT c.*, p.nome as nome_paciente
+                FROM consultas c
+                JOIN pacientes p ON c.paciente_id = p.id
+                WHERE c.paciente_id = ?
+                ORDER BY c.data DESC
+            ''', (paciente_id,))
+            
+            consultas = cursor.fetchall()
+            conn.close()
+            
+            logger.debug(f"Encontradas {len(consultas)} consultas para o paciente")
+            
+            return jsonify([{
+                'id': c['id'],
+                'data': c['data'],
+                'sintomas': c['sintomas'],
+                'diagnostico': c['diagnostico'],
+                'recomendacao': c['recomendacao'],
+                'urgencia': c['urgencia'],
+                'observacoes': c['observacoes'],
+                'nome_paciente': c['nome_paciente']
+            } for c in consultas])
+            
+    except Exception as e:
+        logger.exception(f"Erro ao buscar consultas: {str(e)}")
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    try:
+        resultado = None
+        pacientes = []
+        
+        # Log para desenvolvimento
+        logger.debug(f"Método da requisição: {request.method}")
+        if request.method == 'POST':
+            logger.debug(f"Dados do formulário: {request.form}")
+        
+        # Obter lista de pacientes
+        conn = get_db_connection()
+        if conn is not None:
+            cursor = conn.cursor()
+            cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+            pacientes = cursor.fetchall()
+            conn.close()
+            logger.debug(f"Número de pacientes recuperados: {len(pacientes)}")
+
+        if request.method == 'POST':
+            sintomas_relatados = request.form.getlist('sintomas')
+            info_adicional = request.form.get('info_adicional', '')
+            
+            logger.debug(f"Sintomas relatados: {sintomas_relatados}")
+            logger.debug(f"Informações adicionais: {info_adicional}")
+            
+            if sintomas_relatados and medical_ai:
+                resultado = medical_ai.analyze_symptoms(sintomas_relatados)
+                logger.debug(f"Resultado da análise: {resultado}")
+                
+                if resultado:
+                    diagnostics_history.append(resultado["categoria"])
+                    logger.debug(f"Diagnóstico adicionado ao histórico: {resultado['categoria']}")
+
+        return render_template('index.html',
+                             resultado=resultado,
+                             knowledge_base=knowledge_base,
+                             diagnostics_history=diagnostics_history,
+                             pacientes=pacientes)
+
+    except Exception as e:
+        logger.exception(f"Erro na rota index: {str(e)}")
+        return render_template('error.html', error=str(e)), 500
+
+@app.route('/paciente', methods=['POST'])
+def adicionar_paciente():
+    try:
+        logger.debug(f"Dados recebidos para novo paciente: {request.form}")
+        
+        conn = get_db_connection()
+        if conn is not None:
+            cursor = conn.cursor()
+            dados = request.form
+            
+            # Log dos dados antes da inserção
+            logger.debug(f"Preparando para inserir paciente: {dados['nome']}")
+            
+            cursor.execute('''
+                INSERT INTO pacientes (nome, idade, genero, telefone, email, endereco)
+                VALUES (?, ?, ?, ?, ?, ?)
+            ''', (
+                dados['nome'],
+                calcular_idade(dados['data_nascimento']),
+                dados['genero'],
+                dados.get('telefone'),
+                dados.get('email'),
+                dados.get('endereco')
+            ))
+            
+            last_id = cursor.lastrowid
+            logger.debug(f"Paciente inserido com ID: {last_id}")
+            
+            conn.commit()
+            conn.close()
+            return jsonify({"status": "success", "message": "Paciente adicionado com sucesso", "id": last_id})
+    except Exception as e:
+        logger.exception(f"Erro ao adicionar paciente: {str(e)}")
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+# Configuração de inicialização
 if __name__ == '__main__':
-    app.run(debug=True)
+     with app.app_context():
+        logger.info("Iniciando aplicação em modo de desenvolvimento")
+        init_db()
+        logger.info("Banco de dados inicializado")
+        
+        # Verificar se knowledge_base foi carregado corretamente
+        if knowledge_base.get("categorias"):
+            logger.info(f"Base de conhecimento carregada com {len(knowledge_base['categorias'])} categorias")
+        else:
+            logger.warning("Base de conhecimento vazia ou não carregada corretamente")
+        
+        # Verificar se medical_ai foi inicializado
+        if medical_ai:
+            logger.info("Sistema de IA médica inicializado com sucesso")
+        else:
+            logger.warning("Sistema de IA médica não foi inicializado corretamente")
+        
+        # Iniciar servidor
+        logger.info("Iniciando servidor de desenvolvimento...")
+        app.run(host='0.0.0.0', port=5000, debug=True)

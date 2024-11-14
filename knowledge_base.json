@@ -1,0 +1,46 @@
+{
+   "categorias": {
+        "cardiologia": {
+            "hipertensao": {
+                "sintomas": ["dor de cabeça", "tontura", "falta de ar", "visão embaçada"],
+                "possivel_condicao": "Hipertensão Arterial",
+                "recomendacao": "Monitoramento da pressão arterial e mudanças no estilo de vida",
+                "urgencia": "moderada",
+                "exames_recomendados": ["Medição de Pressão", "Exame de Sangue", "ECG"],
+                "especialista": "Cardiologista",
+                "fatores_risco": ["idade", "obesidade", "sedentarismo", "alimentação rica em sal"]
+            }
+        },
+        "infectologia": {
+            "malaria": {
+                "sintomas": ["febre alta", "calafrios", "suor intenso", "dor muscular", "cansaço"],
+                "possivel_condicao": "Malária",
+                "recomendacao": "Procurar atendimento médico para teste rápido de malária",
+                "urgencia": "alta",
+                "exames_recomendados": ["Teste Rápido de Malária", "Exame de Sangue"],
+                "especialista": "Infectologista",
+                "fatores_risco": ["exposição a mosquitos", "região endêmica"]
+            },
+            "tuberculose": {
+                "sintomas": ["tosse persistente", "perda de peso", "suor noturno", "febre", "fadiga"],
+                "possivel_condicao": "Tuberculose",
+                "recomendacao": "Procurar atendimento médico e realizar exame de escarro",
+                "urgencia": "alta",
+                "exames_recomendados": ["Teste de Escarro", "Raio-X de Tórax"],
+                "especialista": "Infectologista",
+                "fatores_risco": ["contato com infectados", "sistema imunológico enfraquecido"]
+            }
+        },
+        "pneumologia": {
+            "bronquite_cronica": {
+                "sintomas": ["tosse persistente", "produção de muco", "falta de ar", "fadiga"],
+                "possivel_condicao": "Bronquite Crônica",
+                "recomendacao": "Evitar exposição a irritantes e buscar atendimento médico",
+                "urgencia": "moderada",
+                "exames_recomendados": ["Raio-X de Tórax", "Espirometria"],
+                "especialista": "Pneumologista",
+                "fatores_risco": ["tabagismo", "exposição a poluentes"]
+            }
+        }
+    }
+}

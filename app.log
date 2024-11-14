@@ -210,3 +210,903 @@ ValueError: Found unknown categories ['None'] in column 3 during transform
 INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 18:37:24] "[35m[1mPOST / HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 18:37:37] "POST / HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 18:38:55] "POST / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 863-004-326
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:17:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:17:46] "POST / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:18:47] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:18:47] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:18:47] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:18:47] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=T6eM1xDc574u0Ny4f0ij HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:18:47] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 863-004-326
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:26:49] "POST / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 863-004-326
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:27:24] "POST / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 863-004-326
+INFO:werkzeug: * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 863-004-326
+INFO:werkzeug: * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 863-004-326
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:33:00] "POST / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:33:04] "POST / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:33:18] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:33:18] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:33:18] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:33:18] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=jRSY5JDu6raUTBUnTjt0 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:33:18] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 863-004-326
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 863-004-326
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 863-004-326
+INFO:werkzeug: * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 863-004-326
+INFO:werkzeug: * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 863-004-326
+INFO:werkzeug: * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 863-004-326
+INFO:werkzeug: * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/medical_ai_module.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 863-004-326
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 856-842-152
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 856-842-152
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 856-842-152
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:39:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:39:16] "[33mGET /{{%20url_for('static',%20filename='css/style.css')%20}} HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:39:16] "[33mGET /{{%20url_for('static',%20filename='js/main.js')%20}} HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:48] "[33mGET /{{%20url_for('static',%20filename='css/style.css')%20}} HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:48] "[33mGET /{{%20url_for('static',%20filename='js/main.js')%20}} HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:49] "[33mGET /{{%20url_for('static',%20filename='css/style.css')%20}} HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:49] "[33mGET /{{%20url_for('static',%20filename='js/main.js')%20}} HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:49] "[33mGET /{{%20url_for('static',%20filename='css/style.css')%20}} HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:49] "[33mGET /{{%20url_for('static',%20filename='js/main.js')%20}} HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:50] "[33mGET /{{%20url_for('static',%20filename='css/style.css')%20}} HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:50] "[33mGET /{{%20url_for('static',%20filename='js/main.js')%20}} HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:50] "[33mGET /{{%20url_for('static',%20filename='css/style.css')%20}} HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:50] "[33mGET /{{%20url_for('static',%20filename='js/main.js')%20}} HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:51] "[33mGET /{{%20url_for('static',%20filename='css/style.css')%20}} HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:51] "[33mGET /{{%20url_for('static',%20filename='js/main.js')%20}} HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:51] "[33mGET /{{%20url_for('static',%20filename='css/style.css')%20}} HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:51] "[33mGET /{{%20url_for('static',%20filename='js/main.js')%20}} HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:45:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:45:02] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:45:02] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:45:50] "POST / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:45:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:45:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:55:20] "POST / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:55:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:55:20] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 856-842-152
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6125268992.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6142095360.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:07] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6125268992.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6142095360.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6125268992.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6125268992.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6125268992.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6125268992.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6125268992.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6125268992.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:25] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6125268992.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:26] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6142095360.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:26] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6125268992.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:56:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 856-842-152
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6142095360.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:57:03] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6125268992.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:57:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6142095360.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:57:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6125268992.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:57:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6144307200.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:57:45] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:57:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:57:51] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:57:51] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:57:51] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=j1ik0RxZoHjNwCdRsPsc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:57:51] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    cursor.execute('SELECT * FROM pacientes ORDER BY nome')
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6161133568.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:58:08] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    return render_template('error.html', error="Página não encontrada"), 404
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6144307200.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 15:09:20] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    return render_template('error.html', error="Página não encontrada"), 404
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6161133568.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 15:09:22] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in index
+    return render_template('error.html', error="Página não encontrada"), 404
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8622158400 and this is thread id 6144307200.
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 15:09:22] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-11-14 15:09:31,772 - app - INFO - MedicalDiagnosisAI inicializado com sucesso
+2024-11-14 15:09:31,777 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-14 15:09:31,777 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-14 15:09:35,802 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:09:35] "GET / HTTP/1.1" 200 -
+2024-11-14 15:09:35,834 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:09:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:09:35,835 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:09:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:10:05,283 - app - ERROR - Exception on /paciente/1 [DELETE]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 765, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 740, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in page_not_found
+    return render_template('error.html', error="Página não encontrada"), 404
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+2024-11-14 15:10:05,304 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:10:05] "[35m[1mDELETE /paciente/1 HTTP/1.1[0m" 500 -
+2024-11-14 15:10:05,315 - werkzeug - ERROR - Error on request:
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 765, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 740, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in page_not_found
+    return render_template('error.html', error="Página não encontrada"), 404
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/werkzeug/serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/werkzeug/serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1476, in wsgi_app
+    response = self.handle_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 823, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 180, in internal_server_error
+    return render_template('error.html', error="Erro interno do servidor"), 500
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+2024-11-14 15:10:11,068 - app - ERROR - Exception on /paciente/1 [DELETE]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 765, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 740, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in page_not_found
+    return render_template('error.html', error="Página não encontrada"), 404
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+2024-11-14 15:10:11,069 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:10:11] "[35m[1mDELETE /paciente/1 HTTP/1.1[0m" 500 -
+2024-11-14 15:10:11,070 - werkzeug - ERROR - Error on request:
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 765, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 740, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in page_not_found
+    return render_template('error.html', error="Página não encontrada"), 404
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/werkzeug/serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/werkzeug/serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1476, in wsgi_app
+    response = self.handle_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 823, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 180, in internal_server_error
+    return render_template('error.html', error="Erro interno do servidor"), 500
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+2024-11-14 15:10:26,361 - app - ERROR - Erro ao adicionar paciente: time data '' does not match format '%Y-%m-%d'
+2024-11-14 15:10:26,361 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:10:26] "[35m[1mPOST /paciente HTTP/1.1[0m" 500 -
+2024-11-14 15:10:26,375 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:10:26] "GET / HTTP/1.1" 200 -
+2024-11-14 15:10:26,393 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:10:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:10:26,394 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:10:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:11:00,105 - app - ERROR - Erro ao adicionar paciente: table pacientes has no column named telefone
+2024-11-14 15:11:00,106 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:11:00] "[35m[1mPOST /paciente HTTP/1.1[0m" 500 -
+2024-11-14 15:11:00,119 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:11:00] "GET / HTTP/1.1" 200 -
+2024-11-14 15:11:00,135 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:11:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:11:00,136 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:11:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:11:07,433 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:11:07] "POST / HTTP/1.1" 200 -
+2024-11-14 15:11:07,452 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:11:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:11:07,453 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:11:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:13:54,857 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:13:54] "POST / HTTP/1.1" 200 -
+2024-11-14 15:13:54,880 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:13:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:13:54,881 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:13:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:14:12,282 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:14:12] "POST / HTTP/1.1" 200 -
+2024-11-14 15:14:12,301 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:14:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:14:12,302 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:14:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:14:17,910 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:14:17] "POST / HTTP/1.1" 200 -
+2024-11-14 15:14:17,928 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:14:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:14:17,931 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:14:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:18:43,456 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:18:43] "POST / HTTP/1.1" 200 -
+2024-11-14 15:18:43,467 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:18:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:18:43,467 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:18:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:23:28,123 - app - ERROR - Erro ao inicializar MedicalDiagnosisAI: __init__() got an unexpected keyword argument 'sparse'
+2024-11-14 15:23:28,128 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-14 15:23:28,128 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-14 15:23:37,023 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:23:37] "POST / HTTP/1.1" 200 -
+2024-11-14 15:23:37,048 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:23:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:23:37,048 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:23:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:24:14,734 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:24:14] "POST / HTTP/1.1" 200 -
+2024-11-14 15:24:14,755 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:24:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:24:14,757 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:24:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:24:19,614 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:24:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:24:36,461 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:24:36] "POST / HTTP/1.1" 200 -
+2024-11-14 15:24:36,489 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:24:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:24:36,490 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:24:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:25:38,472 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:38] "POST / HTTP/1.1" 200 -
+2024-11-14 15:25:38,495 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:25:38,495 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:25:39,146 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:39] "POST / HTTP/1.1" 200 -
+2024-11-14 15:25:39,172 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:25:39,172 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:25:39,340 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:39] "POST / HTTP/1.1" 200 -
+2024-11-14 15:25:39,352 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:25:39,352 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:25:39,532 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:39] "POST / HTTP/1.1" 200 -
+2024-11-14 15:25:39,545 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:25:39,546 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:25:39,688 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:39] "POST / HTTP/1.1" 200 -
+2024-11-14 15:25:39,700 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:25:39,700 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:25:39,869 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:39] "POST / HTTP/1.1" 200 -
+2024-11-14 15:25:39,881 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:25:39,882 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:25:40,037 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:40] "POST / HTTP/1.1" 200 -
+2024-11-14 15:25:40,049 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-14 15:25:40,049 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 15:25:44,442 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:44] "POST / HTTP/1.1" 200 -
+2024-11-14 15:25:44,467 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:44] "GET /static/css/style.css HTTP/1.1" 200 -
+2024-11-14 15:25:44,468 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:44] "GET /static/js/main.js HTTP/1.1" 200 -
+2024-11-14 15:25:45,518 - app - ERROR - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 765, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 740, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in page_not_found
+    return render_template('error.html', error="Página não encontrada"), 404
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+2024-11-14 15:25:45,537 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 15:25:45] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2024-11-14 15:25:45,548 - werkzeug - ERROR - Error on request:
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 765, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 740, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 176, in page_not_found
+    return render_template('error.html', error="Página não encontrada"), 404
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/werkzeug/serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/werkzeug/serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 1476, in wsgi_app
+    response = self.handle_exception(e)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/app.py", line 823, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 180, in internal_server_error
+    return render_template('error.html', error="Erro interno do servidor"), 500
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/venv/lib/python3.9/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+2024-11-14 15:34:03,367 - app - ERROR - Erro ao inicializar MedicalDiagnosisAI: __init__() got an unexpected keyword argument 'sparse'
+2024-11-14 15:34:03,371 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-14 15:34:03,371 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
