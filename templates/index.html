@@ -1,25 +1,118 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="tab-content" id="mainTabContent">
-    <!-- Diagnóstico Tab -->
-    <div class="tab-pane fade show active" id="diagnostic" role="tabpanel">
-        {% include "sections/diagnostic.html" %}
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">
+                    <i class="fas fa-stethoscope me-2"></i>Diagnóstico Médico
+                </h3>
+                
+                <form method="POST">
+                    <!-- Seleção de Paciente -->
+                    <div class="mb-3">
+                        <label class="form-label">Selecione o Paciente</label>
+                        <select class="form-select" name="paciente_id" required>
+                            <option value="">Escolha um paciente...</option>
+                            {% for paciente in pacientes %}
+                                <option value="{{ paciente.id }}">{{ paciente.nome }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <!-- Sintomas -->
+                    <div class="mb-3">
+                        <label class="form-label">Sintomas</label>
+                        {% for categoria, condicoes in knowledge_base.categorias.items() %}
+                            <div class="card mb-3">
+                                <div class="card-header bg-light">
+                                    {{ categoria|title }}
+                                </div>
+                                <div class="card-body">
+                                    {% for condicao, dados in condicoes.items() %}
+                                        {% for sintoma in dados.sintomas %}
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" 
+                                                       name="sintomas" value="{{ sintoma }}" 
+                                                       id="{{ sintoma|replace(' ', '_') }}">
+                                                <label class="form-check-label" 
+                                                       for="{{ sintoma|replace(' ', '_') }}">
+                                                    {{ sintoma|title }}
+                                                </label>
+                                            </div>
+                                        {% endfor %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                    <!-- Observações -->
+                    <div class="mb-3">
+                        <label class="form-label">Observações Adicionais</label>
+                        <textarea class="form-control" name="observacoes" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-search me-2"></i>Analisar Sintomas
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Resultado do Diagnóstico -->
+        {% if resultado %}
+        <div class="card mt-4">
+            <div class="card-body">
+                <h4 class="card-title">
+                    <i class="fas fa-file-medical me-2"></i>Resultado da Análise
+                </h4>
+
+                <div class="alert alert-{{ 'danger' if resultado.urgencia == 'alta' 
+                                         else 'warning' if resultado.urgencia == 'moderada'
+                                         else 'success' }}">
+                    <strong>Nível de Urgência:</strong> {{ resultado.urgencia|upper }}
+                </div>
+
+                <h5>Possível Condição:</h5>
+                <p class="lead">{{ resultado.possivel_condicao }}</p>
+
+                <h5>Recomendações:</h5>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item">{{ resultado.recomendacao }}</li>
+                    {% for exame in resultado.exames_recomendados %}
+                    <li class="list-group-item">
+                        <i class="fas fa-flask me-2"></i>
+                        {{ exame }}
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <h5>Especialista Recomendado:</h5>
+                <p>{{ resultado.especialista }}</p>
+
+                <h5>Fatores de Risco:</h5>
+                <ul class="list-group">
+                    {% for fator in resultado.fatores_risco %}
+                    <li class="list-group-item">{{ fator|title }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endif %}
     </div>
 
-    <!-- Pacientes Tab -->
-    <div class="tab-pane fade" id="patients" role="tabpanel">
-        {% include "sections/patients.html" %}
-    </div>
-
-    <!-- Histórico Tab -->
-    <div class="tab-pane fade" id="history" role="tabpanel">
-        {% include "sections/history.html" %}
-    </div>
-
-    <!-- Estatísticas Tab -->
-    <div class="tab-pane fade" id="stats" role="tabpanel">
-        {% include "sections/stats.html" %}
+    <!-- Estatísticas -->
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">
+                    <i class="fas fa-chart-bar me-2"></i>Estatísticas
+                </h4>
+                <!-- Adicione suas estatísticas aqui -->
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -673,3 +673,132 @@ IndexError: No item with that key
 2024-11-14 16:14:55,874 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:55] "POST / HTTP/1.1" 200 -
 2024-11-14 16:14:55,895 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2024-11-14 16:14:55,896 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-11-14 16:29:21,715 - werkzeug - INFO -  * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+2024-11-14 16:29:21,785 - werkzeug - INFO -  * Restarting with stat
+2024-11-14 16:29:22,464 - app - INFO - MedicalDiagnosisAI inicializado com sucesso
+2024-11-14 16:29:22,481 - werkzeug - WARNING -  * Debugger is active!
+2024-11-14 16:29:22,487 - werkzeug - INFO -  * Debugger PIN: 856-842-152
+2024-11-14 16:29:25,562 - werkzeug - INFO -  * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+2024-11-14 16:29:25,638 - werkzeug - INFO -  * Restarting with stat
+2024-11-14 16:29:26,229 - app - INFO - MedicalDiagnosisAI inicializado com sucesso
+2024-11-14 16:29:26,244 - werkzeug - WARNING -  * Debugger is active!
+2024-11-14 16:29:26,248 - werkzeug - INFO -  * Debugger PIN: 856-842-152
+2024-11-14 16:30:34,728 - werkzeug - INFO -  * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+2024-11-14 16:30:34,792 - werkzeug - INFO -  * Restarting with stat
+2024-11-14 16:30:35,494 - app - INFO - MedicalDiagnosisAI inicializado com sucesso
+2024-11-14 16:30:35,510 - werkzeug - WARNING -  * Debugger is active!
+2024-11-14 16:30:35,515 - werkzeug - INFO -  * Debugger PIN: 856-842-152
+2024-11-14 16:31:11,845 - app - INFO - MedicalDiagnosisAI inicializado com sucesso
+2024-11-14 16:31:11,866 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-14 16:31:11,866 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-14 16:31:11,867 - werkzeug - INFO -  * Restarting with stat
+2024-11-14 16:31:12,438 - app - INFO - MedicalDiagnosisAI inicializado com sucesso
+2024-11-14 16:31:12,452 - werkzeug - WARNING -  * Debugger is active!
+2024-11-14 16:31:12,457 - werkzeug - INFO -  * Debugger PIN: 856-842-152
+2024-11-14 16:31:17,726 - app - ERROR - Erro na rota index: name 'flash' is not defined
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 308, in index
+    flash('Selecione um paciente antes de realizar o diagnóstico', 'warning')
+NameError: name 'flash' is not defined
+2024-11-14 16:31:17,730 - app - INFO - Locating template 'error.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> no match
+Error: the template could not be found.
+2024-11-14 16:31:17,748 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:31:17] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2024-11-14 16:31:17,769 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:31:17] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-14 16:31:17,774 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:31:17] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-14 16:31:17,787 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:31:17] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=4utJC21k2ntXRfnaXrNG HTTP/1.1" 200 -
+2024-11-14 16:31:17,848 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:31:17] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-14 16:31:22,127 - app - ERROR - Erro na rota index: name 'flash' is not defined
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 308, in index
+    flash('Selecione um paciente antes de realizar o diagnóstico', 'warning')
+NameError: name 'flash' is not defined
+2024-11-14 16:31:22,128 - app - INFO - Locating template 'error.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> no match
+Error: the template could not be found.
+2024-11-14 16:31:22,141 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:31:22] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2024-11-14 16:31:22,158 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:31:22] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-11-14 16:31:22,162 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:31:22] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:31:22,168 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:31:22] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=4utJC21k2ntXRfnaXrNG HTTP/1.1[0m" 304 -
+2024-11-14 16:31:22,196 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:31:22] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-11-14 16:31:41,002 - app - ERROR - Erro na rota index: name 'flash' is not defined
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 308, in index
+    flash('Selecione um paciente antes de realizar o diagnóstico', 'warning')
+NameError: name 'flash' is not defined
+2024-11-14 16:31:41,003 - app - INFO - Locating template 'error.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> no match
+Error: the template could not be found.
+2024-11-14 16:31:41,015 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:31:41] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2024-11-14 16:31:41,031 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:31:41] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:31:41,040 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:31:41] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-11-14 16:31:41,050 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:31:41] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=4utJC21k2ntXRfnaXrNG HTTP/1.1[0m" 304 -
+2024-11-14 16:31:41,079 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:31:41] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-11-14 16:32:02,543 - werkzeug - INFO -  * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+2024-11-14 16:32:02,617 - werkzeug - INFO -  * Restarting with stat
+2024-11-14 16:32:03,220 - app - INFO - MedicalDiagnosisAI inicializado com sucesso
+2024-11-14 16:32:03,233 - werkzeug - WARNING -  * Debugger is active!
+2024-11-14 16:32:03,238 - werkzeug - INFO -  * Debugger PIN: 856-842-152
+2024-11-14 16:32:04,261 - werkzeug - INFO -  * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+2024-11-14 16:32:04,317 - werkzeug - INFO -  * Restarting with stat
+2024-11-14 16:32:04,908 - app - INFO - MedicalDiagnosisAI inicializado com sucesso
+2024-11-14 16:32:04,921 - werkzeug - WARNING -  * Debugger is active!
+2024-11-14 16:32:04,926 - werkzeug - INFO -  * Debugger PIN: 856-842-152
+2024-11-14 16:32:21,260 - werkzeug - INFO -  * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+2024-11-14 16:32:21,319 - werkzeug - INFO -  * Restarting with stat
+2024-11-14 16:32:21,900 - app - INFO - MedicalDiagnosisAI inicializado com sucesso
+2024-11-14 16:32:21,915 - werkzeug - WARNING -  * Debugger is active!
+2024-11-14 16:32:21,920 - werkzeug - INFO -  * Debugger PIN: 856-842-152
+2024-11-14 16:32:25,428 - app - DEBUG - Método da requisição: POST
+2024-11-14 16:32:25,431 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'visão embaçada'), ('sintomas', 'dor muscular'), ('sintomas', 'cansaço'), ('sintomas', 'tosse persistente'), ('info_adicional', '')])
+2024-11-14 16:32:25,441 - app - DEBUG - Número de pacientes recuperados: 31
+2024-11-14 16:32:25,441 - app - ERROR - Erro na rota index: name 'flash' is not defined
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 313, in index
+    flash('Selecione um paciente antes de realizar o diagnóstico', 'warning')
+NameError: name 'flash' is not defined
+2024-11-14 16:32:25,446 - app - INFO - Locating template 'error.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> no match
+Error: the template could not be found.
+2024-11-14 16:32:25,463 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:32:25] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2024-11-14 16:32:25,483 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:32:25] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-11-14 16:32:25,484 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:32:25] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-11-14 16:32:25,490 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:32:25] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=XdBz1VgrQNm8uQfyspZd HTTP/1.1" 200 -
+2024-11-14 16:32:25,520 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:32:25] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-11-14 16:32:33,183 - werkzeug - INFO -  * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/app.py', reloading
+2024-11-14 16:32:33,263 - werkzeug - INFO -  * Restarting with stat
+2024-11-14 16:32:33,844 - app - INFO - MedicalDiagnosisAI inicializado com sucesso
+2024-11-14 16:32:33,859 - werkzeug - WARNING -  * Debugger is active!
+2024-11-14 16:32:33,864 - werkzeug - INFO -  * Debugger PIN: 856-842-152
+2024-11-14 16:51:07,470 - werkzeug - INFO -  * Detected change in '/Applications/XAMPP/xamppfiles/htdocs/ss/config/settings.py', reloading
+2024-11-14 16:51:07,551 - werkzeug - INFO -  * Restarting with stat
+2024-11-14 16:51:27,927 - werkzeug - INFO -  * Restarting with stat
+2024-11-14 16:51:46,262 - werkzeug - INFO -  * Restarting with stat
+2024-11-14 16:52:06,621 - werkzeug - INFO -  * Restarting with stat
+2024-11-14 16:53:15,520 - werkzeug - INFO -  * Restarting with stat
+2024-11-14 16:55:50,257 - werkzeug - INFO -  * Restarting with stat

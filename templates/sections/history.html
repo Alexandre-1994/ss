@@ -1,6 +1,75 @@
-<div class="card">
-    <div class="card-body">
-        <h4><i class="fas fa-history me-2"></i>Histórico de Diagnósticos</h4>
-        <p>Seção em desenvolvimento...</p>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h4><i class="fas fa-user me-2"></i>{{ paciente.nome }}</h4>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><strong>Idade:</strong> {{ paciente.idade }} anos</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><strong>Gênero:</strong> {{ paciente.genero }}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><strong>Telefone:</strong> {{ paciente.telefone }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4><i class="fas fa-history me-2"></i>Histórico de Consultas</h4>
+                    
+                    {% if consultas %}
+                        <div class="timeline">
+                            {% for consulta in consultas %}
+                            <div class="consulta-item mb-4 p-3 border-start border-4 
+                                        border-{% if consulta.urgencia == 'alta' %}danger
+                                               {% elif consulta.urgencia == 'moderada' %}warning
+                                               {% else %}success{% endif %}">
+                                <h5 class="mb-1">
+                                    {{ consulta.data.strftime('%d/%m/%Y %H:%M') }}
+                                    <span class="badge bg-{% if consulta.urgencia == 'alta' %}danger
+                                                         {% elif consulta.urgencia == 'moderada' %}warning
+                                                         {% else %}success{% endif %}">
+                                        {{ consulta.urgencia }}
+                                    </span>
+                                </h5>
+                                
+                                <div class="mb-2">
+                                    <strong>Diagnóstico:</strong> {{ consulta.diagnostico }}
+                                </div>
+                                
+                                <div class="mb-2">
+                                    <strong>Sintomas:</strong>
+                                    {% for sintoma in consulta.sintomas|from_json %}
+                                        <span class="badge bg-secondary me-1">{{ sintoma }}</span>
+                                    {% endfor %}
+                                </div>
+                                
+                                <div class="mb-2">
+                                    <strong>Recomendação:</strong> {{ consulta.recomendacao }}
+                                </div>
+                                
+                                {% if consulta.observacoes %}
+                                <div class="mb-2">
+                                    <strong>Observações:</strong> {{ consulta.observacoes }}
+                                </div>
+                                {% endif %}
+                            </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <p class="text-muted">Nenhuma consulta registrada</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+{% endblock %}

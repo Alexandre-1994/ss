@@ -4,14 +4,13 @@
 <div class="container mt-5">
     <div class="card">
         <div class="card-body text-center">
-            <h3 class="text-danger">
-                <i class="fas fa-exclamation-triangle me-2"></i>
-                Erro
-            </h3>
+            <div class="mb-4">
+                <i class="fas fa-exclamation-triangle text-danger" style="font-size: 4rem;"></i>
+            </div>
+            <h3 class="text-danger mb-3">Erro</h3>
             <p class="lead">{{ error }}</p>
-            <a href="{{ url_for('index') }}" class="btn btn-primary">
-                <i class="fas fa-home me-2"></i>
-                Voltar para a página inicial
+            <a href="{{ url_for('index') }}" class="btn btn-primary mt-3">
+                <i class="fas fa-home me-2"></i>Voltar para a página inicial
             </a>
         </div>
     </div>
