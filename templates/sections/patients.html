@@ -1,110 +1,303 @@
-<div class="card">
-    <div class="card-body">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h4><i class="fas fa-users me-2"></i>Lista de Pacientes</h4>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addPatientModal">
-                <i class="fas fa-user-plus me-2"></i>Novo Paciente
-            </button>
-        </div>
+{% extends "base.html" %}
 
-        <!-- Barra de Pesquisa -->
-        <div class="row mb-4">
-            <div class="col-md-6">
-                <div class="input-group">
-                    <span class="input-group-text">
-                        <i class="fas fa-search"></i>
-                    </span>
-                    <input type="text" class="form-control" id="searchPatient" 
-                           placeholder="Buscar paciente...">
-                </div>
-            </div>
-        </div>
+{% block content %}
+<div class="container mt-4">
+   <!-- Header -->
+   <div class="d-flex justify-content-between align-items-center mb-4">
+       <h2><i class="fas fa-users me-2"></i>Pacientes</h2>
+       <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addPatientModal">
+           <i class="fas fa-user-plus me-2"></i>Novo Paciente
+       </button>
+   </div>
 
-        <!-- Tabela de Pacientes -->
-        <div class="table-responsive">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Idade</th>
-                        <th>Gênero</th>
-                        <th>Última Consulta</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for paciente in pacientes %}
-                    <tr>
-                        <td>{{ paciente.id }}</td>
-                        <td>{{ paciente.nome }}</td>
-                        <td>{{ paciente.idade }}</td>
-                        <td>{{ paciente.genero }}</td>
-                        <td>{{ paciente.ultima_consulta }}</td>
-                        <td>
-                            <button class="btn btn-sm btn-info me-1" onclick="viewPatient({{ paciente.id }})">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <button class="btn btn-sm btn-warning me-1" onclick="editPatient({{ paciente.id }})">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                            <button class="btn btn-sm btn-danger" onclick="deletePatient({{ paciente.id }})">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-    </div>
+   <!-- Search and Filters -->
+   <div class="card mb-4">
+       <div class="card-body">
+           <div class="row">
+               <div class="col-md-4">
+                   <div class="input-group">
+                       <span class="input-group-text">
+                           <i class="fas fa-search"></i>
+                       </span>
+                       <input type="text" id="searchInput" class="form-control" placeholder="Buscar paciente...">
+                   </div>
+               </div>
+               <div class="col-md-3">
+                   <select class="form-select" id="genderFilter">
+                       <option value="">Todos os Gêneros</option>
+                       <option value="M">Masculino</option>
+                       <option value="F">Feminino</option>
+                       <option value="O">Outro</option>
+                   </select>
+               </div>
+               <div class="col-md-3">
+                   <select class="form-select" id="ageFilter">
+                       <option value="">Todas as Idades</option>
+                       <option value="0-18">0-18 anos</option>
+                       <option value="19-30">19-30 anos</option>
+                       <option value="31-50">31-50 anos</option>
+                       <option value="51+">51+ anos</option>
+                   </select>
+               </div>
+           </div>
+       </div>
+   </div>
+
+   <!-- Patients List -->
+   <div class="card">
+       <div class="card-body">
+           <div class="table-responsive">
+               <table class="table table-hover" id="patientsTable">
+                   <thead>
+                       <tr>
+                           <th>Nome</th>
+                           <th>Idade</th>
+                           <th>Gênero</th>
+                           <th>Contato</th>
+                           <th>Última Consulta</th>
+                           <th>Ações</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       {% for paciente in pacientes %}
+                       <tr>
+                           <td>{{ paciente.nome }}</td>
+                           <td>{{ paciente.idade }}</td>
+                           <td>{{ paciente.genero }}</td>
+                           <td>
+                               <small>
+                                   {% if paciente.telefone %}
+                                   <div><i class="fas fa-phone me-1"></i>{{ paciente.telefone }}</div>
+                                   {% endif %}
+                                   {% if paciente.email %}
+                                   <div><i class="fas fa-envelope me-1"></i>{{ paciente.email }}</div>
+                                   {% endif %}
+                               </small>
+                           </td>
+                           <td>{{ paciente.ultima_consulta|format_date if paciente.ultima_consulta else 'Nunca' }}</td>
+                           <td>
+                               <div class="btn-group">
+                                   <button class="btn btn-sm btn-info" onclick="viewPatient({{ paciente.id }})">
+                                       <i class="fas fa-eye"></i>
+                                   </button>
+                                   <button class="btn btn-sm btn-primary" onclick="editPatient({{ paciente.id }})">
+                                       <i class="fas fa-edit"></i>
+                                   </button>
+                                   <a href="{{ url_for('main.historico_paciente', id=paciente.id) }}" 
+                                      class="btn btn-sm btn-secondary">
+                                       <i class="fas fa-history"></i>
+                                   </a>
+                                   <button class="btn btn-sm btn-danger" onclick="deletePatient({{ paciente.id }})">
+                                       <i class="fas fa-trash"></i>
+                                   </button>
+                               </div>
+                           </td>
+                       </tr>
+                       {% endfor %}
+                   </tbody>
+               </table>
+           </div>
+       </div>
+   </div>
 </div>
 
-<!-- Modal Adicionar Paciente -->
-<div class="modal fade" id="addPatientModal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Adicionar Novo Paciente</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <form id="addPatientForm">
-                    <div class="mb-3">
-                        <label class="form-label">Nome Completo</label>
-                        <input type="text" class="form-control" name="nome" required>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Data de Nascimento</label>
-                        <input type="date" class="form-control" name="data_nascimento" required>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Gênero</label>
-                        <select class="form-select" name="genero" required>
-                            <option value="">Selecione...</option>
-                            <option value="M">Masculino</option>
-                            <option value="F">Feminino</option>
-                            <option value="O">Outro</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Telefone</label>
-                        <input type="tel" class="form-control" name="telefone">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-control" name="email">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Endereço</label>
-                        <textarea class="form-control" name="endereco" rows="2"></textarea>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary" onclick="savePatient()">Salvar</button>
-            </div>
-        </div>
-    </div>
+<!-- Add/Edit Patient Modal -->
+<div class="modal fade" id="patientModal" tabindex="-1">
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <h5 class="modal-title">Novo Paciente</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+           </div>
+           <div class="modal-body">
+               <form id="patientForm" method="POST" action="{{ url_for('main.adicionar_paciente') }}">
+                   <input type="hidden" name="id" id="patientId">
+                   <div class="mb-3">
+                       <label class="form-label">Nome Completo</label>
+                       <input type="text" class="form-control" name="nome" required>
+                   </div>
+                   <div class="row mb-3">
+                       <div class="col-md-6">
+                           <label class="form-label">Idade</label>
+                           <input type="number" class="form-control" name="idade" required>
+                       </div>
+                       <div class="col-md-6">
+                           <label class="form-label">Gênero</label>
+                           <select class="form-select" name="genero" required>
+                               <option value="">Selecione...</option>
+                               <option value="M">Masculino</option>
+                               <option value="F">Feminino</option>
+                               <option value="O">Outro</option>
+                           </select>
+                       </div>
+                   </div>
+                   <div class="mb-3">
+                       <label class="form-label">Telefone</label>
+                       <input type="tel" class="form-control" name="telefone">
+                   </div>
+                   <div class="mb-3">
+                       <label class="form-label">Email</label>
+                       <input type="email" class="form-control" name="email">
+                   </div>
+                   <div class="mb-3">
+                       <label class="form-label">Endereço</label>
+                       <textarea class="form-control" name="endereco" rows="2"></textarea>
+                   </div>
+               </form>
+           </div>
+           <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+               <button type="button" class="btn btn-primary" onclick="savePatient()">Salvar</button>
+           </div>
+       </div>
+   </div>
 </div>
+
+{% block scripts %}
+<script>
+// Search and Filter Functions
+document.getElementById('searchInput').addEventListener('input', filterTable);
+document.getElementById('genderFilter').addEventListener('change', filterTable);
+document.getElementById('ageFilter').addEventListener('change', filterTable);
+
+function filterTable() {
+   const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+   const genderFilter = document.getElementById('genderFilter').value;
+   const ageFilter = document.getElementById('ageFilter').value;
+   
+   const rows = document.querySelectorAll('#patientsTable tbody tr');
+   
+   rows.forEach(row => {
+       const nome = row.cells[0].textContent.toLowerCase();
+       const idade = parseInt(row.cells[1].textContent);
+       const genero = row.cells[2].textContent;
+       
+       const matchesSearch = nome.includes(searchTerm);
+       const matchesGender = !genderFilter || genero === genderFilter;
+       const matchesAge = !ageFilter || checkAgeRange(idade, ageFilter);
+       
+       row.style.display = matchesSearch && matchesGender && matchesAge ? '' : 'none';
+   });
+}
+
+function checkAgeRange(age, range) {
+   switch(range) {
+       case '0-18': return age <= 18;
+       case '19-30': return age > 18 && age <= 30;
+       case '31-50': return age > 30 && age <= 50;
+       case '51+': return age > 50;
+       default: return true;
+   }
+}
+
+// CRUD Operations
+async function viewPatient(id) {
+   try {
+       const response = await fetch(`/paciente/${id}`);
+       const data = await response.json();
+       
+       // Fill form with patient data
+       const form = document.getElementById('patientForm');
+       Object.keys(data).forEach(key => {
+           const input = form.elements[key];
+           if (input) input.value = data[key];
+       });
+       
+       // Disable form fields
+       Array.from(form.elements).forEach(input => input.disabled = true);
+       
+       // Show modal
+       const modal = new bootstrap.Modal(document.getElementById('patientModal'));
+       modal.show();
+   } catch (error) {
+       console.error('Error loading patient:', error);
+       alert('Erro ao carregar dados do paciente');
+   }
+}
+
+async function savePatient() {
+   try {
+       const form = document.getElementById('patientForm');
+       const formData = new FormData(form);
+       
+       const response = await fetch('/paciente', {
+           method: 'POST',
+           body: formData
+       });
+       
+       if (response.ok) {
+           location.reload();
+       } else {
+           alert('Erro ao salvar paciente');
+       }
+   } catch (error) {
+       console.error('Error saving patient:', error);
+       alert('Erro ao salvar paciente');
+   }
+}
+
+function deletePatient(id) {
+   if (confirm('Tem certeza que deseja excluir este paciente?')) {
+       fetch(`/paciente/${id}`, { method: 'DELETE' })
+           .then(response => {
+               if (response.ok) {
+                   location.reload();
+               } else {
+                   alert('Erro ao excluir paciente');
+               }
+           })
+           .catch(error => {
+               console.error('Error deleting patient:', error);
+               alert('Erro ao excluir paciente');
+           });
+   }
+}
+
+async function deletePatient(id) {
+    if (confirm('Tem certeza que deseja excluir este paciente?')) {
+        try {
+            const response = await fetch(`/paciente/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                location.reload();
+            } else {
+                const data = await response.json();
+                alert(data.error || 'Erro ao excluir paciente');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Erro ao excluir paciente');
+        }
+    }
+}
+
+async function savePatient() {
+    const form = document.getElementById('patientForm');
+    const formData = new FormData(form);
+    const id = formData.get('id');
+    
+    try {
+        const response = await fetch(id ? `/paciente/${id}` : '/paciente', {
+            method: id ? 'PUT' : 'POST',
+            body: formData
+        });
+        
+        if (response.ok) {
+            location.reload();
+        } else {
+            const data = await response.json();
+            alert(data.error || 'Erro ao salvar paciente');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Erro ao salvar paciente');
+    }
+}
+</script>
+{% endblock %}
+{% endblock %}

@@ -57,6 +57,7 @@
     </style>
     {% block extra_css %}{% endblock %}
 </head>
+
 <body>
     <!-- Header -->
     <div class="header">
@@ -70,7 +71,43 @@
             </div>
         </div>
     </div>
+<!-- Navigation Tabs -->
+<a href="{{ url_for('main.pacientes') }}" class="nav-link">Pacientes</a>
+<a href="{{ url_for('main.historico_paciente', id=paciente.id) }}" class="nav-link">Histórico</a>
+<a href="{{ url_for('main.estatisticas') }}" class="nav-link">Estatísticas</a>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Carregar conteúdo quando a tab for clicada
+        const tabElements = document.querySelectorAll('a[data-bs-toggle="tab"]');
+        
+        tabElements.forEach(tab => {
+            tab.addEventListener('shown.bs.tab', function (event) {
+                const target = event.target.getAttribute('href').replace('#', '');
+                loadTabContent(target);
+            });
+        });
+        
+        function loadTabContent(tabId) {
+            const contentDiv = document.querySelector(`#${tabId}`);
+            
+            // Mapeia tabs para rotas
+            const routes = {
+                'patients': '/paciente',
+                'history': '/historico',
+                'stats': '/estatisticas'
+            };
+            
+            if (routes[tabId]) {
+                fetch(routes[tabId])
+                    .then(response => response.text())
+                    .then(html => {
+                        contentDiv.innerHTML = html;
+                    });
+            }
+        }
+    });
+</script>
     <!-- Flash Messages -->
     {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
@@ -106,4 +143,5 @@
     </script>
     {% block extra_js %}{% endblock %}
 </body>
+
 </html>

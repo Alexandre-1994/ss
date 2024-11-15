@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for, jsonify, current_app
+from flask import Blueprint, render_template, request, flash, redirect, url_for, jsonify, current_app # type: ignore
 from app.database import (
     get_db, get_paciente, get_pacientes, get_consultas_paciente, 
     adicionar_consulta
@@ -72,52 +72,113 @@ def index():
         flash('Ocorreu um erro ao processar sua solicitação', 'danger')
         return redirect(url_for('main.index'))
 
+# Rota para adicionar novo paciente
 @main_bp.route('/paciente', methods=['POST'])
 def adicionar_paciente():
     try:
+        dados = request.form
         db = get_db()
         if db is not None:
             cursor = db.cursor()
-            dados = request.form
-            
-            # Validações básicas
-            if not dados.get('nome'):
-                return jsonify({"status": "error", "message": "Nome é obrigatório"}), 400
-
-            # Log dos dados antes da inserção
-            logger.debug(f"Preparando para inserir paciente: {dados['nome']}")
-            
             cursor.execute('''
                 INSERT INTO pacientes (nome, idade, genero, telefone, email, endereco)
                 VALUES (?, ?, ?, ?, ?, ?)
             ''', (
                 dados['nome'],
-                int(dados['idade']) if dados.get('idade') else None,
-                dados.get('genero'),
+                dados['idade'],
+                dados['genero'],
                 dados.get('telefone'),
                 dados.get('email'),
                 dados.get('endereco')
             ))
-            
             db.commit()
-            last_id = cursor.lastrowid
-            logger.debug(f"Paciente inserido com ID: {last_id}")
-            
-            # Buscar paciente recém-inserido
-            cursor.execute('SELECT * FROM pacientes WHERE id = ?', (last_id,))
-            paciente = cursor.fetchone()
-            
-            flash('Paciente adicionado com sucesso!', 'success')
             return jsonify({
-                "status": "success", 
-                "message": "Paciente adicionado com sucesso",
-                "id": last_id,
-                "paciente": dict(paciente)
+                'status': 'success',
+                'message': 'Paciente adicionado com sucesso',
+                'id': cursor.lastrowid
             })
     except Exception as e:
         logger.exception(f"Erro ao adicionar paciente: {str(e)}")
-        db.rollback()
-        return jsonify({"status": "error", "message": str(e)}), 500
+        return jsonify({'error': str(e)}), 500
+    
+# Rota de pacientes - aceita GET e POST
+@main_bp.route('/pacientes', methods=['GET', 'POST'])
+def pacientes():
+    try:
+        if request.method == 'POST':
+            # Lógica para adicionar/editar paciente
+            pass
+        
+        # Lógica para listar pacientes
+        db = get_db()
+        if db is not None:
+            cursor = db.cursor()
+            cursor.execute('''
+                SELECT 
+                    p.*,
+                    MAX(c.data) as ultima_consulta
+                FROM pacientes p
+                LEFT JOIN consultas c ON p.id = c.paciente_id
+                GROUP BY p.id
+                ORDER BY p.nome
+            ''')
+            pacientes = cursor.fetchall()
+            return render_template('pacientes.html', pacientes=pacientes)
+            
+    except Exception as e:
+        logger.exception(f"Erro ao listar pacientes: {str(e)}")
+        flash('Erro ao carregar lista de pacientes', 'danger')
+        return redirect(url_for('main.index'))
+# Rota para gerenciar um paciente específico - aceita múltiplos métodos
+@main_bp.route('/paciente/<int:id>', methods=['GET', 'POST', 'PUT', 'DELETE'])
+def paciente(id):
+    try:
+        if request.method == 'GET':
+            # Obter dados do paciente
+            db = get_db()
+            if db is not None:
+                cursor = db.cursor()
+                cursor.execute('SELECT * FROM pacientes WHERE id = ?', (id,))
+                paciente = cursor.fetchone()
+                if paciente:
+                    return jsonify(dict(paciente))
+            return jsonify({'error': 'Paciente não encontrado'}), 404
+            
+        elif request.method in ['POST', 'PUT']:
+            # Atualizar paciente
+            dados = request.form
+            db = get_db()
+            if db is not None:
+                cursor = db.cursor()
+                cursor.execute('''
+                    UPDATE pacientes 
+                    SET nome=?, idade=?, genero=?, telefone=?, email=?, endereco=?
+                    WHERE id=?
+                ''', (
+                    dados['nome'],
+                    dados['idade'],
+                    dados['genero'],
+                    dados.get('telefone'),
+                    dados.get('email'),
+                    dados.get('endereco'),
+                    id
+                ))
+                db.commit()
+                return jsonify({'status': 'success', 'message': 'Paciente atualizado'})
+                
+        elif request.method == 'DELETE':
+            # Excluir paciente
+            db = get_db()
+            if db is not None:
+                cursor = db.cursor()
+                cursor.execute('DELETE FROM pacientes WHERE id = ?', (id,))
+                db.commit()
+                return jsonify({'status': 'success', 'message': 'Paciente excluído'})
+                
+    except Exception as e:
+        logger.exception(f"Erro ao manipular paciente: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+    
 
 @main_bp.route('/paciente/<int:id>')
 def detalhes_paciente(id):
@@ -137,24 +198,147 @@ def detalhes_paciente(id):
         flash('Erro ao buscar detalhes do paciente', 'danger')
         return redirect(url_for('main.index'))
 
-@main_bp.route('/paciente/<int:id>/historico')
-def historico_paciente(id):
+@main_bp.route('/historico')
+def historico():
     try:
-        paciente = get_paciente(id)
-        if not paciente:
-            flash('Paciente não encontrado', 'danger')
-            return redirect(url_for('main.index'))
-        
-        consultas = get_consultas_paciente(id)
-        
-        return render_template('paciente/historico.html',
-                             paciente=paciente,
-                             consultas=consultas)
+        db = get_db()
+        if db is not None:
+            cursor = db.cursor()
+            
+            # Buscar todas as consultas com informações do paciente
+            cursor.execute('''
+                SELECT 
+                    c.*,
+                    p.nome as nome_paciente,
+                    p.id as paciente_id
+                FROM consultas c
+                JOIN pacientes p ON c.paciente_id = p.id
+                ORDER BY c.data DESC
+            ''')
+            consultas = cursor.fetchall()
+            
+            # Calcular estatísticas
+            stats = {
+                'total_consultas': len(consultas),
+                'urgencias': {
+                    'alta': 0,
+                    'moderada': 0,
+                    'baixa': 0
+                }
+            }
+            
+            for consulta in consultas:
+                stats['urgencias'][consulta['urgencia'].lower()] += 1
+            
+            return render_template('historico.html',
+                                 consultas=consultas,
+                                 stats=stats)
             
     except Exception as e:
         logger.exception(f"Erro ao buscar histórico: {str(e)}")
-        flash('Erro ao buscar histórico do paciente', 'danger')
+        flash('Erro ao carregar histórico', 'danger')
         return redirect(url_for('main.index'))
+
+@main_bp.route('/consulta/<int:id>')
+def consulta_detalhes(id):
+    try:
+        db = get_db()
+        if db is not None:
+            cursor = db.cursor()
+            cursor.execute('''
+                SELECT 
+                    c.*,
+                    p.nome as nome_paciente
+                FROM consultas c
+                JOIN pacientes p ON c.paciente_id = p.id
+                WHERE c.id = ?
+            ''', (id,))
+            
+            consulta = cursor.fetchone()
+            if consulta:
+                # Converter consulta para dicionário
+                consulta_dict = dict(consulta)
+                consulta_dict['sintomas'] = json.loads(consulta_dict['sintomas'])
+                return jsonify(consulta_dict)
+            
+            return jsonify({'error': 'Consulta não encontrada'}), 404
+            
+    except Exception as e:
+        logger.exception(f"Erro ao buscar detalhes da consulta: {str(e)}")
+        return jsonify({'error': 'Erro ao buscar detalhes'}), 500
+# Rota para histórico
+@main_bp.route('/paciente/<int:id>/historico', methods=['GET'])
+def historico_paciente(id):
+   try:
+       # Buscar paciente
+       db = get_db()
+       if db is not None:
+           cursor = db.cursor()
+           
+           # Buscar dados do paciente
+           cursor.execute('''
+               SELECT * FROM pacientes WHERE id = ?
+           ''', (id,))
+           paciente = cursor.fetchone()
+           
+           if not paciente:
+               flash('Paciente não encontrado', 'danger')
+               return redirect(url_for('main.pacientes'))
+           
+           # Buscar consultas do paciente
+           cursor.execute('''
+               SELECT 
+                   c.*,
+                   strftime('%d/%m/%Y %H:%M', c.data) as data_formatada
+               FROM consultas c
+               WHERE c.paciente_id = ?
+               ORDER BY c.data DESC
+           ''', (id,))
+           consultas = cursor.fetchall()
+           
+           # Calcular estatísticas do paciente
+           stats = {
+               'total_consultas': len(consultas),
+               'urgencias': {
+                   'alta': 0,
+                   'moderada': 0,
+                   'baixa': 0
+               },
+               'diagnosticos_frequentes': {}
+           }
+           
+           # Processar consultas para estatísticas
+           for consulta in consultas:
+               # Contagem de urgências
+               urgencia = consulta['urgencia'].lower()
+               stats['urgencias'][urgencia] = stats['urgencias'].get(urgencia, 0) + 1
+               
+               # Contagem de diagnósticos
+               diagnostico = consulta['diagnostico']
+               stats['diagnosticos_frequentes'][diagnostico] = stats['diagnosticos_frequentes'].get(diagnostico, 0) + 1
+           
+           # Ordenar diagnósticos mais frequentes
+           stats['diagnosticos_frequentes'] = dict(
+               sorted(
+                   stats['diagnosticos_frequentes'].items(), 
+                   key=lambda x: x[1], 
+                   reverse=True
+               )[:5]  # Top 5 diagnósticos
+           )
+           
+           # Buscar última consulta
+           ultima_consulta = consultas[0] if consultas else None
+           
+           return render_template('paciente/historico.html',
+                                paciente=paciente,
+                                consultas=consultas,
+                                stats=stats,
+                                ultima_consulta=ultima_consulta)
+           
+   except Exception as e:
+       logger.exception(f"Erro ao buscar histórico do paciente {id}: {str(e)}")
+       flash('Erro ao carregar histórico do paciente', 'danger')
+       return redirect(url_for('main.pacientes'))
 
 @main_bp.route('/consultas/<int:paciente_id>')
 def consultas_paciente(paciente_id):
@@ -176,7 +360,7 @@ def consultas_paciente(paciente_id):
         logger.exception(f"Erro ao buscar consultas: {str(e)}")
         return jsonify({"error": "Erro ao buscar consultas"}), 500
 
-@main_bp.route('/estatisticas')
+@main_bp.route('/estatisticas', methods=['GET'])
 def estatisticas():
     try:
         db = get_db()

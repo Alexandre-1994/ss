@@ -1,75 +1,228 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card mb-4">
+<div class="container mt-4">
+    <!-- Cabeçalho da Página -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2><i class="fas fa-history me-2"></i>Histórico de Atendimentos</h2>
+        <div class="d-flex gap-2">
+            <div class="input-group">
+                <input type="text" id="searchInput" class="form-control" placeholder="Buscar paciente...">
+                <span class="input-group-text">
+                    <i class="fas fa-search"></i>
+                </span>
+            </div>
+            <select class="form-select" id="filterUrgencia" style="width: auto;">
+                <option value="">Todas Urgências</option>
+                <option value="alta">Alta</option>
+                <option value="moderada">Moderada</option>
+                <option value="baixa">Baixa</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Cards de Estatísticas Rápidas -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card bg-primary text-white">
                 <div class="card-body">
-                    <h4><i class="fas fa-user me-2"></i>{{ paciente.nome }}</h4>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <p><strong>Idade:</strong> {{ paciente.idade }} anos</p>
-                        </div>
-                        <div class="col-md-4">
-                            <p><strong>Gênero:</strong> {{ paciente.genero }}</p>
-                        </div>
-                        <div class="col-md-4">
-                            <p><strong>Telefone:</strong> {{ paciente.telefone }}</p>
-                        </div>
-                    </div>
+                    <h6 class="card-title">Total de Consultas</h6>
+                    <h2 class="mb-0">{{ stats.total_consultas }}</h2>
                 </div>
             </div>
-
-            <div class="card">
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-danger text-white">
                 <div class="card-body">
-                    <h4><i class="fas fa-history me-2"></i>Histórico de Consultas</h4>
-                    
-                    {% if consultas %}
-                        <div class="timeline">
-                            {% for consulta in consultas %}
-                            <div class="consulta-item mb-4 p-3 border-start border-4 
-                                        border-{% if consulta.urgencia == 'alta' %}danger
-                                               {% elif consulta.urgencia == 'moderada' %}warning
-                                               {% else %}success{% endif %}">
-                                <h5 class="mb-1">
-                                    {{ consulta.data.strftime('%d/%m/%Y %H:%M') }}
-                                    <span class="badge bg-{% if consulta.urgencia == 'alta' %}danger
-                                                         {% elif consulta.urgencia == 'moderada' %}warning
-                                                         {% else %}success{% endif %}">
-                                        {{ consulta.urgencia }}
-                                    </span>
-                                </h5>
-                                
-                                <div class="mb-2">
-                                    <strong>Diagnóstico:</strong> {{ consulta.diagnostico }}
-                                </div>
-                                
-                                <div class="mb-2">
-                                    <strong>Sintomas:</strong>
-                                    {% for sintoma in consulta.sintomas|from_json %}
-                                        <span class="badge bg-secondary me-1">{{ sintoma }}</span>
-                                    {% endfor %}
-                                </div>
-                                
-                                <div class="mb-2">
-                                    <strong>Recomendação:</strong> {{ consulta.recomendacao }}
-                                </div>
-                                
-                                {% if consulta.observacoes %}
-                                <div class="mb-2">
-                                    <strong>Observações:</strong> {{ consulta.observacoes }}
-                                </div>
-                                {% endif %}
-                            </div>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        <p class="text-muted">Nenhuma consulta registrada</p>
-                    {% endif %}
+                    <h6 class="card-title">Urgência Alta</h6>
+                    <h2 class="mb-0">{{ stats.urgencias.alta }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-warning">
+                <div class="card-body">
+                    <h6 class="card-title">Urgência Moderada</h6>
+                    <h2 class="mb-0">{{ stats.urgencias.moderada }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                    <h6 class="card-title">Urgência Baixa</h6>
+                    <h2 class="mb-0">{{ stats.urgencias.baixa }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabela de Histórico -->
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover" id="historicoTable">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Paciente</th>
+                            <th>Diagnóstico</th>
+                            <th>Sintomas</th>
+                            <th>Urgência</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for consulta in consultas %}
+                        <tr>
+                            <td>{{ consulta.data|format_date }}</td>
+                            <td>
+                                <a href="{{ url_for('main.historico_paciente', id=consulta.paciente_id) }}"
+                                   class="text-decoration-none">
+                                    {{ consulta.nome_paciente }}
+                                </a>
+                            </td>
+                            <td>{{ consulta.diagnostico }}</td>
+                            <td>
+                                {% for sintoma in consulta.sintomas|format_json %}
+                                <span class="badge bg-secondary">{{ sintoma }}</span>
+                                {% endfor %}
+                            </td>
+                            <td>
+                                <span class="badge bg-{{ 
+                                    'danger' if consulta.urgencia == 'alta' 
+                                    else 'warning' if consulta.urgencia == 'moderada' 
+                                    else 'success' }}">
+                                    {{ consulta.urgencia }}
+                                </span>
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn-info" 
+                                        onclick="verDetalhes({{ consulta.id }})"
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#detalhesModal">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <a href="{{ url_for('main.historico_paciente', id=consulta.paciente_id) }}" 
+                                   class="btn btn-sm btn-primary">
+                                    <i class="fas fa-history"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Detalhes -->
+<div class="modal fade" id="detalhesModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detalhes da Consulta</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div id="detalhesConteudo">
+                    <!-- Conteúdo será preenchido via JavaScript -->
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+{% block scripts %}
+<script>
+// Função para busca e filtro
+document.getElementById('searchInput').addEventListener('input', filterTable);
+document.getElementById('filterUrgencia').addEventListener('change', filterTable);
+
+function filterTable() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const urgenciaFilter = document.getElementById('filterUrgencia').value.toLowerCase();
+    const rows = document.querySelectorAll('#historicoTable tbody tr');
+
+    rows.forEach(row => {
+        const paciente = row.cells[1].textContent.toLowerCase();
+        const diagnostico = row.cells[2].textContent.toLowerCase();
+        const urgencia = row.cells[4].textContent.toLowerCase();
+        
+        const matchesSearch = paciente.includes(searchTerm) || 
+                            diagnostico.includes(searchTerm);
+        const matchesUrgencia = !urgenciaFilter || urgencia.includes(urgenciaFilter);
+
+        row.style.display = matchesSearch && matchesUrgencia ? '' : 'none';
+    });
+}
+
+// Função para ver detalhes
+async function verDetalhes(consultaId) {
+    try {
+        const response = await fetch(`/consulta/${consultaId}`);
+        const data = await response.json();
+        
+        const detalhes = `
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>Paciente:</strong> ${data.nome_paciente}</p>
+                    <p><strong>Data:</strong> ${formatDate(data.data)}</p>
+                    <p><strong>Urgência:</strong> 
+                        <span class="badge bg-${getUrgenciaClass(data.urgencia)}">
+                            ${data.urgencia}
+                        </span>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Diagnóstico:</strong> ${data.diagnostico}</p>
+                    <p><strong>Recomendação:</strong> ${data.recomendacao}</p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <p><strong>Sintomas:</strong></p>
+                    <div>
+                        ${data.sintomas.map(s => 
+                            `<span class="badge bg-secondary me-1">${s}</span>`
+                        ).join('')}
+                    </div>
+                </div>
+            </div>
+            ${data.observacoes ? `
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <p><strong>Observações:</strong></p>
+                        <p>${data.observacoes}</p>
+                    </div>
+                </div>
+            ` : ''}
+        `;
+        
+        document.getElementById('detalhesConteudo').innerHTML = detalhes;
+    } catch (error) {
+        console.error('Erro ao carregar detalhes:', error);
+    }
+}
+
+function formatDate(dateString) {
+    return new Date(dateString).toLocaleDateString('pt-BR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    });
+}
+
+function getUrgenciaClass(urgencia) {
+    switch(urgencia.toLowerCase()) {
+        case 'alta': return 'danger';
+        case 'moderada': return 'warning';
+        default: return 'success';
+    }
+}
+</script>
+{% endblock %}
 {% endblock %}

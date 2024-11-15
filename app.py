@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask # type: ignore
 from config.settings import DevelopmentConfig
 from config.settings import get_config
 import logging

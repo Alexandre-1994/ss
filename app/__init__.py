@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template, flash, redirect, url_for # type: ignore
 from config.settings import DevelopmentConfig
 import os
 import logging
@@ -32,6 +32,9 @@ def create_app(config_class=DevelopmentConfig):
         logger.error(f"Template directory not found: {template_dir}")
         os.makedirs(template_dir, exist_ok=True)
         logger.info("Template directory created")
+
+         # Criar diretório de templates de erro
+        os.makedirs(os.path.join(template_dir, 'errors'), exist_ok=True)
     
     if not os.path.exists(static_dir):
         logger.error(f"Static directory not found: {static_dir}")
