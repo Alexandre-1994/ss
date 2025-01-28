@@ -673,3 +673,347 @@ IndexError: No item with that key
 2024-11-14 16:14:55,874 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:55] "POST / HTTP/1.1" 200 -
 2024-11-14 16:14:55,895 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2024-11-14 16:14:55,896 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2024 16:14:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-01-27 18:29:42,465 - __main__ - INFO - MedicalDiagnosisAI inicializado com sucesso
+2025-01-27 18:29:42,467 - __main__ - INFO - Iniciando aplicação em modo de desenvolvimento
+2025-01-27 18:29:42,471 - __main__ - INFO - Banco de dados inicializado com sucesso
+2025-01-27 18:29:42,471 - __main__ - INFO - Banco de dados inicializado
+2025-01-27 18:29:42,471 - __main__ - INFO - Base de conhecimento carregada com 3 categorias
+2025-01-27 18:29:42,471 - __main__ - INFO - Sistema de IA médica inicializado com sucesso
+2025-01-27 18:29:42,471 - __main__ - INFO - Iniciando servidor de desenvolvimento...
+2025-01-27 18:29:42,516 - werkzeug - WARNING -  * Debugger is active!
+2025-01-27 18:29:42,529 - werkzeug - INFO -  * Debugger PIN: 856-842-152
+2025-01-27 18:30:05,874 - __main__ - DEBUG - Método da requisição: GET
+2025-01-27 18:30:05,875 - __main__ - DEBUG - Número de pacientes recuperados: 31
+2025-01-27 18:30:05,876 - app - INFO - Locating template 'index.html':
+    1: trying loader of application '__main__'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/index.html')
+2025-01-27 18:30:05,883 - app - INFO - Locating template 'base.html':
+    1: trying loader of application '__main__'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/base.html')
+2025-01-27 18:30:05,886 - app - INFO - Locating template 'sections/diagnostic.html':
+    1: trying loader of application '__main__'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/diagnostic.html')
+2025-01-27 18:30:05,895 - app - INFO - Locating template 'sections/patients.html':
+    1: trying loader of application '__main__'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/patients.html')
+2025-01-27 18:30:05,899 - app - INFO - Locating template 'sections/history.html':
+    1: trying loader of application '__main__'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/history.html')
+2025-01-27 18:30:05,900 - app - INFO - Locating template 'sections/stats.html':
+    1: trying loader of application '__main__'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/stats.html')
+2025-01-27 18:30:05,901 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:30:05] "GET / HTTP/1.1" 200 -
+2025-01-27 18:30:05,927 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:30:05] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-01-27 18:30:05,927 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:30:05] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-01-27 18:30:07,146 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:30:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-27 18:30:19,227 - __main__ - DEBUG - Método da requisição: POST
+2025-01-27 18:30:19,228 - __main__ - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'falta de ar'), ('sintomas', 'febre alta'), ('sintomas', 'calafrios'), ('sintomas', 'dor muscular'), ('sintomas', 'produção de muco'), ('info_adicional', '')])
+2025-01-27 18:30:19,229 - __main__ - DEBUG - Número de pacientes recuperados: 31
+2025-01-27 18:30:19,229 - __main__ - DEBUG - Sintomas relatados: ['dor de cabeça', 'falta de ar', 'febre alta', 'calafrios', 'dor muscular', 'produção de muco']
+2025-01-27 18:30:19,230 - __main__ - DEBUG - Informações adicionais: 
+2025-01-27 18:30:19,230 - __main__ - DEBUG - Resultado da análise: {'sintomas': ['febre alta', 'calafrios', 'suor intenso', 'dor muscular', 'cansaço'], 'possivel_condicao': 'Malária', 'recomendacao': 'Procurar atendimento médico para teste rápido de malária', 'urgencia': 'alta', 'exames_recomendados': ['Teste Rápido de Malária', 'Exame de Sangue'], 'especialista': 'Infectologista', 'fatores_risco': ['exposição a mosquitos', 'região endêmica'], 'categoria': 'infectologia', 'condicao': 'malaria', 'confianca': 37.5}
+2025-01-27 18:30:19,230 - __main__ - DEBUG - Diagnóstico adicionado ao histórico: infectologia
+2025-01-27 18:30:19,233 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:30:19] "POST / HTTP/1.1" 200 -
+2025-01-27 18:30:19,251 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:30:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-27 18:30:19,256 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:30:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-01-27 18:31:51,003 - __main__ - DEBUG - Método da requisição: POST
+2025-01-27 18:31:51,003 - __main__ - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'falta de ar'), ('sintomas', 'febre alta'), ('sintomas', 'calafrios'), ('sintomas', 'dor muscular'), ('sintomas', 'produção de muco'), ('info_adicional', '')])
+2025-01-27 18:31:51,005 - __main__ - DEBUG - Número de pacientes recuperados: 31
+2025-01-27 18:31:51,005 - __main__ - DEBUG - Sintomas relatados: ['dor de cabeça', 'falta de ar', 'febre alta', 'calafrios', 'dor muscular', 'produção de muco']
+2025-01-27 18:31:51,005 - __main__ - DEBUG - Informações adicionais: 
+2025-01-27 18:31:51,005 - __main__ - DEBUG - Resultado da análise: {'sintomas': ['febre alta', 'calafrios', 'suor intenso', 'dor muscular', 'cansaço'], 'possivel_condicao': 'Malária', 'recomendacao': 'Procurar atendimento médico para teste rápido de malária', 'urgencia': 'alta', 'exames_recomendados': ['Teste Rápido de Malária', 'Exame de Sangue'], 'especialista': 'Infectologista', 'fatores_risco': ['exposição a mosquitos', 'região endêmica'], 'categoria': 'infectologia', 'condicao': 'malaria', 'confianca': 37.5}
+2025-01-27 18:31:51,005 - __main__ - DEBUG - Diagnóstico adicionado ao histórico: infectologia
+2025-01-27 18:31:51,008 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:31:51] "POST / HTTP/1.1" 200 -
+2025-01-27 18:31:51,027 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:31:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-27 18:31:51,028 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:31:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-01-27 18:31:54,209 - __main__ - DEBUG - Método da requisição: POST
+2025-01-27 18:31:54,210 - __main__ - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'falta de ar'), ('sintomas', 'febre alta'), ('sintomas', 'calafrios'), ('sintomas', 'dor muscular'), ('sintomas', 'produção de muco'), ('info_adicional', '')])
+2025-01-27 18:31:54,211 - __main__ - DEBUG - Número de pacientes recuperados: 31
+2025-01-27 18:31:54,211 - __main__ - DEBUG - Sintomas relatados: ['dor de cabeça', 'falta de ar', 'febre alta', 'calafrios', 'dor muscular', 'produção de muco']
+2025-01-27 18:31:54,211 - __main__ - DEBUG - Informações adicionais: 
+2025-01-27 18:31:54,211 - __main__ - DEBUG - Resultado da análise: {'sintomas': ['febre alta', 'calafrios', 'suor intenso', 'dor muscular', 'cansaço'], 'possivel_condicao': 'Malária', 'recomendacao': 'Procurar atendimento médico para teste rápido de malária', 'urgencia': 'alta', 'exames_recomendados': ['Teste Rápido de Malária', 'Exame de Sangue'], 'especialista': 'Infectologista', 'fatores_risco': ['exposição a mosquitos', 'região endêmica'], 'categoria': 'infectologia', 'condicao': 'malaria', 'confianca': 37.5}
+2025-01-27 18:31:54,212 - __main__ - DEBUG - Diagnóstico adicionado ao histórico: infectologia
+2025-01-27 18:31:54,214 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:31:54] "POST / HTTP/1.1" 200 -
+2025-01-27 18:31:54,232 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:31:54] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-01-27 18:31:54,234 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:31:54] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-01-27 18:31:54,961 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:31:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-27 18:32:02,522 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:32:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-27 18:33:14,773 - __main__ - DEBUG - Método da requisição: POST
+2025-01-27 18:33:14,774 - __main__ - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('sintomas', 'suor intenso'), ('sintomas', 'cansaço'), ('sintomas', 'fadiga'), ('info_adicional', '')])
+2025-01-27 18:33:14,775 - __main__ - DEBUG - Número de pacientes recuperados: 31
+2025-01-27 18:33:14,775 - __main__ - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada', 'suor intenso', 'cansaço', 'fadiga']
+2025-01-27 18:33:14,775 - __main__ - DEBUG - Informações adicionais: 
+2025-01-27 18:33:14,776 - __main__ - DEBUG - Resultado da análise: None
+2025-01-27 18:33:14,778 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:33:14] "POST / HTTP/1.1" 200 -
+2025-01-27 18:33:14,795 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:33:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-27 18:33:14,801 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:33:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-01-27 18:34:03,529 - __main__ - DEBUG - Método da requisição: POST
+2025-01-27 18:34:03,530 - __main__ - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('sintomas', 'suor intenso'), ('sintomas', 'cansaço'), ('sintomas', 'fadiga'), ('info_adicional', '')])
+2025-01-27 18:34:03,531 - __main__ - DEBUG - Número de pacientes recuperados: 31
+2025-01-27 18:34:03,531 - __main__ - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada', 'suor intenso', 'cansaço', 'fadiga']
+2025-01-27 18:34:03,531 - __main__ - DEBUG - Informações adicionais: 
+2025-01-27 18:34:03,531 - __main__ - DEBUG - Resultado da análise: None
+2025-01-27 18:34:03,563 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:34:03] "POST / HTTP/1.1" 200 -
+2025-01-27 18:34:03,575 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:34:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-27 18:34:03,577 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:34:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-01-27 18:40:00,624 - app - INFO - MedicalDiagnosisAI inicializado com sucesso
+2025-01-27 18:40:00,679 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-01-27 18:40:00,680 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-27 18:40:00,680 - werkzeug - INFO -  * Restarting with stat
+2025-01-27 18:40:01,246 - app - INFO - MedicalDiagnosisAI inicializado com sucesso
+2025-01-27 18:40:01,261 - werkzeug - WARNING -  * Debugger is active!
+2025-01-27 18:40:01,267 - werkzeug - INFO -  * Debugger PIN: 913-344-812
+2025-01-27 18:40:12,472 - app - DEBUG - Método da requisição: POST
+2025-01-27 18:40:12,474 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'visão embaçada'), ('sintomas', 'suor intenso'), ('sintomas', 'cansaço'), ('sintomas', 'fadiga'), ('info_adicional', '')])
+2025-01-27 18:40:12,483 - app - DEBUG - Número de pacientes recuperados: 31
+2025-01-27 18:40:12,483 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'visão embaçada', 'suor intenso', 'cansaço', 'fadiga']
+2025-01-27 18:40:12,483 - app - DEBUG - Informações adicionais: 
+2025-01-27 18:40:12,483 - app - DEBUG - Resultado da análise: None
+2025-01-27 18:40:12,483 - app - INFO - Locating template 'index.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/index.html')
+2025-01-27 18:40:12,487 - app - INFO - Locating template 'base.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/base.html')
+2025-01-27 18:40:12,489 - app - INFO - Locating template 'sections/diagnostic.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/diagnostic.html')
+2025-01-27 18:40:12,496 - app - INFO - Locating template 'sections/patients.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/patients.html')
+2025-01-27 18:40:12,500 - app - INFO - Locating template 'sections/history.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/history.html')
+2025-01-27 18:40:12,501 - app - INFO - Locating template 'sections/stats.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/stats.html')
+2025-01-27 18:40:12,501 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:40:12] "POST / HTTP/1.1" 200 -
+2025-01-27 18:40:12,525 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:40:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-01-27 18:40:12,525 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:40:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-27 18:40:26,088 - app - DEBUG - Método da requisição: POST
+2025-01-27 18:40:26,089 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'cansaço'), ('sintomas', 'tosse persistente'), ('info_adicional', '')])
+2025-01-27 18:40:26,090 - app - DEBUG - Número de pacientes recuperados: 31
+2025-01-27 18:40:26,090 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'cansaço', 'tosse persistente']
+2025-01-27 18:40:26,091 - app - DEBUG - Informações adicionais: 
+2025-01-27 18:40:26,091 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 33.33}
+2025-01-27 18:40:26,091 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2025-01-27 18:40:26,093 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:40:26] "POST / HTTP/1.1" 200 -
+2025-01-27 18:40:26,111 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:40:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-27 18:40:26,113 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:40:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-01-27 18:48:44,700 - app - DEBUG - Método da requisição: POST
+2025-01-27 18:48:44,702 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'cansaço'), ('sintomas', 'tosse persistente'), ('info_adicional', '')])
+2025-01-27 18:48:44,703 - app - DEBUG - Número de pacientes recuperados: 31
+2025-01-27 18:48:44,703 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'cansaço', 'tosse persistente']
+2025-01-27 18:48:44,703 - app - DEBUG - Informações adicionais: 
+2025-01-27 18:48:44,703 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 33.33}
+2025-01-27 18:48:44,703 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2025-01-27 18:48:44,704 - app - INFO - Locating template 'sections/diagnostic.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/sections/diagnostic.html')
+2025-01-27 18:48:44,723 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:48:44] "POST / HTTP/1.1" 200 -
+2025-01-27 18:48:44,740 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:48:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-27 18:48:44,742 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:48:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-01-27 18:49:07,346 - app - DEBUG - Método da requisição: POST
+2025-01-27 18:49:07,347 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'suor intenso'), ('sintomas', 'dor muscular'), ('sintomas', 'tosse persistente'), ('sintomas', 'produção de muco'), ('info_adicional', '')])
+2025-01-27 18:49:07,348 - app - DEBUG - Número de pacientes recuperados: 31
+2025-01-27 18:49:07,348 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'suor intenso', 'dor muscular', 'tosse persistente', 'produção de muco']
+2025-01-27 18:49:07,348 - app - DEBUG - Informações adicionais: 
+2025-01-27 18:49:07,348 - app - DEBUG - Resultado da análise: None
+2025-01-27 18:49:07,351 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:49:07] "POST / HTTP/1.1" 200 -
+2025-01-27 18:49:07,369 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:49:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-27 18:49:07,370 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:49:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-01-27 18:49:36,852 - app - DEBUG - Método da requisição: POST
+2025-01-27 18:49:36,853 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'febre alta'), ('sintomas', 'calafrios'), ('sintomas', 'produção de muco'), ('sintomas', 'falta de ar'), ('info_adicional', '')])
+2025-01-27 18:49:36,854 - app - DEBUG - Número de pacientes recuperados: 31
+2025-01-27 18:49:36,855 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'febre alta', 'calafrios', 'produção de muco', 'falta de ar']
+2025-01-27 18:49:36,855 - app - DEBUG - Informações adicionais: 
+2025-01-27 18:49:36,855 - app - DEBUG - Resultado da análise: None
+2025-01-27 18:49:36,858 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:49:36] "POST / HTTP/1.1" 200 -
+2025-01-27 18:49:36,879 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:49:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-27 18:49:36,881 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:49:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-01-27 18:49:47,429 - app - DEBUG - Método da requisição: POST
+2025-01-27 18:49:47,429 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'calafrios'), ('sintomas', 'suor intenso'), ('info_adicional', '')])
+2025-01-27 18:49:47,430 - app - DEBUG - Número de pacientes recuperados: 31
+2025-01-27 18:49:47,430 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'calafrios', 'suor intenso']
+2025-01-27 18:49:47,431 - app - DEBUG - Informações adicionais: 
+2025-01-27 18:49:47,431 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 33.33}
+2025-01-27 18:49:47,431 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2025-01-27 18:49:47,434 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:49:47] "POST / HTTP/1.1" 200 -
+2025-01-27 18:49:47,449 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:49:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-01-27 18:49:47,450 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:49:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-27 18:50:02,108 - app - DEBUG - Tentando excluir paciente com ID: 32
+2025-01-27 18:50:02,110 - app - INFO - Paciente com ID 32 excluído com sucesso
+2025-01-27 18:50:02,111 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:50:02] "DELETE /paciente/32 HTTP/1.1" 200 -
+2025-01-27 18:50:02,119 - app - DEBUG - Método da requisição: POST
+2025-01-27 18:50:02,120 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'calafrios'), ('sintomas', 'suor intenso'), ('info_adicional', '')])
+2025-01-27 18:50:02,123 - app - DEBUG - Número de pacientes recuperados: 30
+2025-01-27 18:50:02,123 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'calafrios', 'suor intenso']
+2025-01-27 18:50:02,123 - app - DEBUG - Informações adicionais: 
+2025-01-27 18:50:02,123 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 33.33}
+2025-01-27 18:50:02,123 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2025-01-27 18:50:02,125 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:50:02] "POST / HTTP/1.1" 200 -
+2025-01-27 18:50:02,142 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:50:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-27 18:50:02,142 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:50:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-01-27 18:50:23,867 - app - DEBUG - Método da requisição: POST
+2025-01-27 18:50:23,868 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('info_adicional', '')])
+2025-01-27 18:50:23,869 - app - DEBUG - Número de pacientes recuperados: 30
+2025-01-27 18:50:23,869 - app - DEBUG - Sintomas relatados: []
+2025-01-27 18:50:23,869 - app - DEBUG - Informações adicionais: 
+2025-01-27 18:50:23,872 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:50:23] "POST / HTTP/1.1" 200 -
+2025-01-27 18:50:23,890 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:50:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-27 18:50:23,890 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:50:23] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-01-27 18:50:47,186 - app - DEBUG - Dados recebidos para novo paciente: ImmutableMultiDict([('nome', 'Ipsam pariatur Sequ'), ('data_nascimento', '2003-04-13'), ('genero', 'M'), ('telefone', '+1 (444) 321-1707'), ('email', 'ludinylud@mailinator.com'), ('endereco', 'Dolor vitae et sit ')])
+2025-01-27 18:50:47,186 - app - DEBUG - Preparando para inserir paciente: Ipsam pariatur Sequ
+2025-01-27 18:50:47,200 - app - ERROR - Erro ao adicionar paciente: table pacientes has no column named telefone
+Traceback (most recent call last):
+  File "/Applications/XAMPP/xamppfiles/htdocs/ss/app.py", line 346, in adicionar_paciente
+    cursor.execute('''
+sqlite3.OperationalError: table pacientes has no column named telefone
+2025-01-27 18:50:47,205 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:50:47] "[35m[1mPOST /paciente HTTP/1.1[0m" 500 -
+2025-01-27 18:50:47,217 - app - DEBUG - Método da requisição: POST
+2025-01-27 18:50:47,217 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('info_adicional', '')])
+2025-01-27 18:50:47,219 - app - DEBUG - Número de pacientes recuperados: 30
+2025-01-27 18:50:47,219 - app - DEBUG - Sintomas relatados: []
+2025-01-27 18:50:47,219 - app - DEBUG - Informações adicionais: 
+2025-01-27 18:50:47,222 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:50:47] "POST / HTTP/1.1" 200 -
+2025-01-27 18:50:47,236 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:50:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-27 18:50:47,241 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:50:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-01-27 18:51:01,696 - app - DEBUG - Método da requisição: POST
+2025-01-27 18:51:01,697 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'falta de ar'), ('sintomas', 'visão embaçada'), ('sintomas', 'tosse persistente'), ('sintomas', 'perda de peso'), ('sintomas', 'febre'), ('sintomas', 'fadiga'), ('info_adicional', '')])
+2025-01-27 18:51:01,697 - app - DEBUG - Número de pacientes recuperados: 30
+2025-01-27 18:51:01,698 - app - DEBUG - Sintomas relatados: ['falta de ar', 'visão embaçada', 'tosse persistente', 'perda de peso', 'febre', 'fadiga']
+2025-01-27 18:51:01,698 - app - DEBUG - Informações adicionais: 
+2025-01-27 18:51:01,698 - app - DEBUG - Resultado da análise: {'sintomas': ['tosse persistente', 'perda de peso', 'suor noturno', 'febre', 'fadiga'], 'possivel_condicao': 'Tuberculose', 'recomendacao': 'Procurar atendimento médico e realizar exame de escarro', 'urgencia': 'alta', 'exames_recomendados': ['Teste de Escarro', 'Raio-X de Tórax'], 'especialista': 'Infectologista', 'fatores_risco': ['contato com infectados', 'sistema imunológico enfraquecido'], 'categoria': 'infectologia', 'condicao': 'tuberculose', 'confianca': 57.14}
+2025-01-27 18:51:01,698 - app - DEBUG - Diagnóstico adicionado ao histórico: infectologia
+2025-01-27 18:51:01,701 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:51:01] "POST / HTTP/1.1" 200 -
+2025-01-27 18:51:01,718 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:51:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-01-27 18:51:01,719 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:51:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-27 18:51:25,074 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:51:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-27 18:54:05,050 - app - DEBUG - Método da requisição: POST
+2025-01-27 18:54:05,051 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'falta de ar'), ('sintomas', 'visão embaçada'), ('sintomas', 'tosse persistente'), ('sintomas', 'perda de peso'), ('sintomas', 'febre'), ('sintomas', 'fadiga'), ('info_adicional', '')])
+2025-01-27 18:54:05,052 - app - DEBUG - Número de pacientes recuperados: 30
+2025-01-27 18:54:05,052 - app - DEBUG - Sintomas relatados: ['falta de ar', 'visão embaçada', 'tosse persistente', 'perda de peso', 'febre', 'fadiga']
+2025-01-27 18:54:05,052 - app - DEBUG - Informações adicionais: 
+2025-01-27 18:54:05,052 - app - DEBUG - Resultado da análise: {'sintomas': ['tosse persistente', 'perda de peso', 'suor noturno', 'febre', 'fadiga'], 'possivel_condicao': 'Tuberculose', 'recomendacao': 'Procurar atendimento médico e realizar exame de escarro', 'urgencia': 'alta', 'exames_recomendados': ['Teste de Escarro', 'Raio-X de Tórax'], 'especialista': 'Infectologista', 'fatores_risco': ['contato com infectados', 'sistema imunológico enfraquecido'], 'categoria': 'infectologia', 'condicao': 'tuberculose', 'confianca': 57.14}
+2025-01-27 18:54:05,052 - app - DEBUG - Diagnóstico adicionado ao histórico: infectologia
+2025-01-27 18:54:05,053 - app - INFO - Locating template 'base.html':
+    1: trying loader of application 'app'
+       class: jinja2.loaders.FileSystemLoader
+       encoding: 'utf-8'
+       followlinks: False
+       searchpath:
+         - /Applications/XAMPP/xamppfiles/htdocs/ss/templates
+       -> found ('/Applications/XAMPP/xamppfiles/htdocs/ss/templates/base.html')
+2025-01-27 18:54:05,059 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:54:05] "POST / HTTP/1.1" 200 -
+2025-01-27 18:54:29,137 - app - DEBUG - Método da requisição: POST
+2025-01-27 18:54:29,138 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'falta de ar'), ('sintomas', 'visão embaçada'), ('sintomas', 'tosse persistente'), ('sintomas', 'perda de peso'), ('sintomas', 'febre'), ('sintomas', 'fadiga'), ('info_adicional', '')])
+2025-01-27 18:54:29,139 - app - DEBUG - Número de pacientes recuperados: 30
+2025-01-27 18:54:29,139 - app - DEBUG - Sintomas relatados: ['falta de ar', 'visão embaçada', 'tosse persistente', 'perda de peso', 'febre', 'fadiga']
+2025-01-27 18:54:29,139 - app - DEBUG - Informações adicionais: 
+2025-01-27 18:54:29,139 - app - DEBUG - Resultado da análise: {'sintomas': ['tosse persistente', 'perda de peso', 'suor noturno', 'febre', 'fadiga'], 'possivel_condicao': 'Tuberculose', 'recomendacao': 'Procurar atendimento médico e realizar exame de escarro', 'urgencia': 'alta', 'exames_recomendados': ['Teste de Escarro', 'Raio-X de Tórax'], 'especialista': 'Infectologista', 'fatores_risco': ['contato com infectados', 'sistema imunológico enfraquecido'], 'categoria': 'infectologia', 'condicao': 'tuberculose', 'confianca': 57.14}
+2025-01-27 18:54:29,139 - app - DEBUG - Diagnóstico adicionado ao histórico: infectologia
+2025-01-27 18:54:29,142 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:54:29] "POST / HTTP/1.1" 200 -
+2025-01-27 18:55:02,132 - app - DEBUG - Método da requisição: POST
+2025-01-27 18:55:02,132 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('info_adicional', '')])
+2025-01-27 18:55:02,134 - app - DEBUG - Número de pacientes recuperados: 30
+2025-01-27 18:55:02,134 - app - DEBUG - Sintomas relatados: []
+2025-01-27 18:55:02,134 - app - DEBUG - Informações adicionais: 
+2025-01-27 18:55:02,136 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:55:02] "POST / HTTP/1.1" 200 -
+2025-01-27 18:55:08,486 - app - DEBUG - Método da requisição: POST
+2025-01-27 18:55:08,486 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('info_adicional', '')])
+2025-01-27 18:55:08,487 - app - DEBUG - Número de pacientes recuperados: 30
+2025-01-27 18:55:08,487 - app - DEBUG - Sintomas relatados: []
+2025-01-27 18:55:08,487 - app - DEBUG - Informações adicionais: 
+2025-01-27 18:55:08,490 - werkzeug - INFO - 127.0.0.1 - - [27/Jan/2025 18:55:08] "POST / HTTP/1.1" 200 -
+2025-01-28 08:27:46,070 - app - DEBUG - Método da requisição: POST
+2025-01-28 08:27:46,071 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('info_adicional', '')])
+2025-01-28 08:27:46,072 - app - DEBUG - Número de pacientes recuperados: 30
+2025-01-28 08:27:46,072 - app - DEBUG - Sintomas relatados: []
+2025-01-28 08:27:46,072 - app - DEBUG - Informações adicionais: 
+2025-01-28 08:27:46,075 - werkzeug - INFO - 127.0.0.1 - - [28/Jan/2025 08:27:46] "POST / HTTP/1.1" 200 -
+2025-01-28 08:29:05,420 - app - DEBUG - Método da requisição: POST
+2025-01-28 08:29:05,421 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('sintomas', 'dor de cabeça'), ('sintomas', 'tontura'), ('sintomas', 'visão embaçada'), ('sintomas', 'febre alta'), ('sintomas', 'calafrios'), ('sintomas', 'fadiga'), ('info_adicional', '')])
+2025-01-28 08:29:05,422 - app - DEBUG - Número de pacientes recuperados: 30
+2025-01-28 08:29:05,422 - app - DEBUG - Sintomas relatados: ['dor de cabeça', 'tontura', 'visão embaçada', 'febre alta', 'calafrios', 'fadiga']
+2025-01-28 08:29:05,422 - app - DEBUG - Informações adicionais: 
+2025-01-28 08:29:05,422 - app - DEBUG - Resultado da análise: {'sintomas': ['dor de cabeça', 'tontura', 'falta de ar', 'visão embaçada'], 'possivel_condicao': 'Hipertensão Arterial', 'recomendacao': 'Monitoramento da pressão arterial e mudanças no estilo de vida', 'urgencia': 'moderada', 'exames_recomendados': ['Medição de Pressão', 'Exame de Sangue', 'ECG'], 'especialista': 'Cardiologista', 'fatores_risco': ['idade', 'obesidade', 'sedentarismo', 'alimentação rica em sal'], 'categoria': 'cardiologia', 'condicao': 'hipertensao', 'confianca': 42.86}
+2025-01-28 08:29:05,422 - app - DEBUG - Diagnóstico adicionado ao histórico: cardiologia
+2025-01-28 08:29:05,424 - werkzeug - INFO - 127.0.0.1 - - [28/Jan/2025 08:29:05] "POST / HTTP/1.1" 200 -
+2025-01-28 08:30:45,286 - app - DEBUG - Método da requisição: POST
+2025-01-28 08:30:45,287 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('info_adicional', '')])
+2025-01-28 08:30:45,288 - app - DEBUG - Número de pacientes recuperados: 30
+2025-01-28 08:30:45,288 - app - DEBUG - Sintomas relatados: []
+2025-01-28 08:30:45,288 - app - DEBUG - Informações adicionais: 
+2025-01-28 08:30:45,290 - werkzeug - INFO - 127.0.0.1 - - [28/Jan/2025 08:30:45] "POST / HTTP/1.1" 200 -
+2025-01-28 08:30:49,165 - app - DEBUG - Método da requisição: POST
+2025-01-28 08:30:49,166 - app - DEBUG - Dados do formulário: ImmutableMultiDict([('info_adicional', '')])
+2025-01-28 08:30:49,167 - app - DEBUG - Número de pacientes recuperados: 30
+2025-01-28 08:30:49,167 - app - DEBUG - Sintomas relatados: []
+2025-01-28 08:30:49,167 - app - DEBUG - Informações adicionais: 
+2025-01-28 08:30:49,169 - werkzeug - INFO - 127.0.0.1 - - [28/Jan/2025 08:30:49] "POST / HTTP/1.1" 200 -
