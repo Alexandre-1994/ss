@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}500 - Erro Interno{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <div class="error-template">
+                <h1 class="display-1 text-muted">500</h1>
+                <h2>Oops! Algo deu errado</h2>
+                <div class="error-details my-3">
+                    Desculpe, ocorreu um erro interno no servidor. Nossa equipe foi notificada!
+                </div>
+                <div class="error-actions">
+                    <a href="{{ url_for('main.index') }}" class="btn btn-primary">
+                        <i class="fas fa-home me-2"></i>Voltar para Início
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
